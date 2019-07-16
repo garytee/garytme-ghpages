@@ -25,6 +25,15 @@ module.exports = {
      },
     },
     {
+     resolve: `gatsby-plugin-s3`,
+     options: {
+         bucketName: 'garyt.me',
+         protocol: "https",
+         hostname: "www.garyt.me",
+         acl: null,
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/resources`,

@@ -1,2 +1,0 @@
-# garytme
-garyt.me website
