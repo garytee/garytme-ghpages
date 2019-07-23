@@ -6,9 +6,8 @@ path: "/portfolios/canon/"
 images: [
   "canon/canon.png",
 ]
-portimages: [
-  "canon/canon2.png",
-]
+attachments:
+  - "./canon2.png"
 ---
 
 # Canon

@@ -6,9 +6,8 @@ path: "/portfolios/redmango/"
 images: [
   "redmango/redmango.png",
 ]
-portimages: [
-  "redmango/redmango2.png",
-]
+attachments:
+  - "./redmango2.png"
 ---
 
 # Red Mango

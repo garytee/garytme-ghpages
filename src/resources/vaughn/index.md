@@ -6,9 +6,8 @@ path: "/portfolios/vaughn/"
 images: [
   "vaughn/vaughn.png",
 ]
-portimages: [
-  "vaughn/vaughn2.png",
-]
+attachments:
+  - "./vaughn2.png"
 ---
 
 # Vaughn College

@@ -124,7 +124,7 @@ const Gnb = ({
   const isPost = !(isPortfolio || isHome || isResume);
 
   return (
-    <GnbWrapper>
+    <GnbWrapper id="navigation">
       <MobileMenu isActive={isMenuOpened} isSubActive={isSubMenuClosed}>
         <Background onClick={toggleMenu} isActive={isMenuOpened} />
         <MobileMenus>

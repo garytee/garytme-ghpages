@@ -85,3 +85,11 @@ button, a, label {
 * {
 	filter: none !important;
 }
+
+
+.scrolled {
+    transition: all .5s ease;
+    -webkit-box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
+    box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
+}

@@ -6,11 +6,10 @@ path: "/portfolios/crookedladder/"
 images: [
   "crookedladder/crookedladder.png",
 ]
-portimages: [
-  "crookedladder/crookedladder2.png",
-  "crookedladder/crookedladder3.png",
-  "crookedladder/crookedladder4.png",
-]
+attachments:
+  - "./crookedladder2.png"
+  - "./crookedladder3.png"
+  - "./crookedladder4.png"
 ---
 
 # Crooked Ladder Brewery

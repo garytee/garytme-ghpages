@@ -7,6 +7,38 @@ import { BLACK_COLOR, WHITE_COLOR } from '~/components/Common/constants';
 import { Wrapper } from './styled';
 
 export default class App extends Component {
+
+
+    componentDidMount() {
+    window.addEventListener("scroll", this.toggleBodyClass);
+    this.toggleBodyClass();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.toggleBodyClass);
+  }
+
+  toggleBodyClass = () => {
+    if (window.scrollY > 100) {
+      // document.body.classList.add("showChildDiv");
+      document.getElementById("navigation").classList.add("scrolled");
+    } else {
+      // document.body.classList.remove("showChildDiv");
+      document.getElementById("navigation").classList.remove("scrolled");
+    }
+  };
+
+  render() {
+    return (
+      <div
+        style={{
+          height: "1000px"
+        }}
+      />
+    );
+  }
+
+
   static propTypes = {
     children: PropTypes.node.isRequired,
     location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,

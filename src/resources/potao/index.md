@@ -6,9 +6,8 @@ path: "/portfolios/potao/"
 images: [
   "potao/potao.png",
 ]
-portimages: [
-  "potao/potao2.png",
-]
+attachments:
+  - "./potao2.png"
 ---
 
 # People of the American Outdoors

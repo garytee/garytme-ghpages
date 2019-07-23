@@ -6,9 +6,8 @@ path: "/portfolios/hopsteiner/"
 images: [
   "hopsteiner/hopsteiner.png",
 ]
-portimages: [
-  "hopsteiner/hopsteiner2.png",
-]
+attachments:
+  - "./hopsteiner2.png"
 ---
 
 # Hopsteiner

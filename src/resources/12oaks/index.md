@@ -6,12 +6,9 @@ path: "/portfolios/12oaksdesserts/"
 images: [
   "12oaks/12oaks.png",
 ]
-portimages: [
-  "12oaks/12oaks2.png",
-]
-test: "./12oaks2.png"
+attachments:
+  - "./12oaks2.png"
 ---
-
 # 12 Oaks Desserts
 
 ## About the company

@@ -5,7 +5,7 @@ import { PREFIX } from '~/constants';
 import { Wrapper, PortfolioDescription, PortfolioImages } from './styled';
 import Img from 'gatsby-image'
 
-const Portfolio = ({ data: { portfolio: { frontmatter: { title, images, portimages, test }, html } } }) => (
+const Portfolio = ({ data: { portfolio: { frontmatter: { title, images, attachments }, html } } }) => (
   <Wrapper>
     <Helmet>
       <title>
@@ -55,10 +55,72 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, images, portimag
 {/*         } */}
 
 
-                  {test != null &&
+{/*                   {test != null && */}
+{/*  */}
+{/*  <Img fixed={test.childImageSharp.fixed} alt={title} /> */}
+{/* } */}
 
- <Img fixed={test.childImageSharp.fixed} alt={title} />
-}
+
+
+{/*       {portimages.map((portimage) => { */}
+{/*         if (portimage.includes('//')) { */}
+{/*           return ( */}
+{/*             <img */}
+{/*               key={portimage} */}
+{/*               src={portimage} */}
+{/*               alt={title} */}
+{/*             /> */}
+{/*           ); */}
+{/*         } */}
+{/*  */}
+{/*         const url = require(`~/resources/${portimage}`); */}
+{/*  */}
+{/*         return ( */}
+{/*           <img */}
+{/*             key={portimage} */}
+{/*             src={url} */}
+{/*             alt={title} */}
+{/*           /> */}
+{/*         ); */}
+{/*       })} */}
+
+
+      {attachments != null && attachments.map((attachment) => {
+{/*         if (attachment.includes('//')) { */}
+{/*           return ( */}
+{/*             <img */}
+{/*               key={attachment} */}
+{/*               src={attachment} */}
+{/*               alt={title} */}
+{/*             /> */}
+{/*           ); */}
+{/*         } */}
+{/*  */}
+{/*         const url = require(`~/resources/${attachment}`); */}
+
+        return (
+          <Img
+            key={attachment}
+            fixed={attachment.childImageSharp.fixed}
+            alt={title}
+          />
+        );
+      })}
+
+
+
+
+
+
+{/*                   {phoneimg != null && */}
+{/*  */}
+{/*  <Img fixed={phoneimg.childImageSharp.fixed} alt={title} /> */}
+{/* } */}
+
+{/*                   {test != null && */}
+{/*  */}
+{/*  <Img fixed={test.childImageSharp.fixed} alt={title} /> */}
+{/* } */}
 
 
 

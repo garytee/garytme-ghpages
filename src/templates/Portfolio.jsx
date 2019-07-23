@@ -26,8 +26,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         images
-        portimages
-        test {
+        attachments {
             childImageSharp {
                 fixed(width: 540, quality: 72) {
                     ...GatsbyImageSharpFixed_withWebp_noBase64

@@ -6,9 +6,8 @@ path: "/portfolios/cope/"
 images: [
   "cope/cope.png",
 ]
-portimages: [
-  "cope/cope2.png",
-]
+attachments:
+  - "./cope2.png"
 ---
 
 # COPE (Centers of Psychiatric Excellence)

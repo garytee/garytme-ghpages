@@ -6,10 +6,8 @@ path: "/portfolios/brother/"
 images: [
   "brother/brother.png",
 ]
-portimages: [
-  "brother/brother2.png",
-]
-test: "./brother2.png"
+attachments:
+  - "./brother2.png"
 ---
 
 # Brother
