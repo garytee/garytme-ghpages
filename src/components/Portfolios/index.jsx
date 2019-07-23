@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 // import PortfolioCard from '~/components/Common/PortfolioCard';
 import { PREFIX } from '~/constants';
 import { Wrapper } from './styled';
+import Img from 'gatsby-image'
 
 
 // const Item = posed.li({
@@ -84,18 +85,47 @@ const Portfolios = ({ data: { portfolios: { edges: portfolios } } }) => (
       <meta name="og:title" content={`${PREFIX}PORTFOLIOS`} />
     </Helmet>
     <PortfolioCards initialPose="closed" pose="open" className="portfolio_cards">
-    {portfolios.map(({ node: { frontmatter: { path, title, images = [] } } }) => {
+    {portfolios.map(({ node: { frontmatter: { attachments2, path, title, images = [] } } }) => {
       const [image = null] = images;
 
       if (image !== null) {
         return (
           <PortfolioCard initialPose="closed" pose="open" className="portfolio_card" key={path}>
             <Link to={path}>
-              {image.includes('//') ? (
-                <img src={image} alt="portfolio" />
-              ) : (
-                <img src={require(`~/resources/${image}`)} alt="portfolio" />
-              )}
+{/*               {image.includes('//') ? ( */}
+{/*                 <img src={image} alt="portfolio" /> */}
+{/*               ) : ( */}
+{/*                 <img src={require(`~/resources/${image}`)} alt="portfolio" /> */}
+{/*               )} */}
+
+
+
+      {attachments2 != null && attachments2.map((attachment2, i) => {
+{/*         if (attachment.includes('//')) { */}
+{/*           return ( */}
+{/*             <img */}
+{/*               key={attachment} */}
+{/*               src={attachment} */}
+{/*               alt={title} */}
+{/*             /> */}
+{/*           ); */}
+{/*         } */}
+{/*  */}
+{/*         const url = require(`~/resources/${attachment}`); */}
+
+        return (
+          <Img
+            key={i}
+            fixed={attachment2.childImageSharp.fixed}
+            alt={title}
+          />
+        );
+      })}
+
+
+
+
+
 {/*               <h6> */}
 {/*                 {title} */}
 {/*               </h6> */}

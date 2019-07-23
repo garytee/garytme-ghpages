@@ -2,12 +2,14 @@
 type: "portfolio"
 title: "COPE Psychiatry"
 date: "2019-01-04:00:00.000Z"
-path: "/portfolios/cope/"
+path: "/portfolio/cope/"
 images: [
   "cope/cope.png",
 ]
 attachments:
   - "./cope2.png"
+attachments2:
+  - "./cope.png"
 ---
 
 # COPE (Centers of Psychiatric Excellence)

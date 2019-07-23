@@ -113,7 +113,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         if (portfoliosCount) {
           createPage({
-            path: '/portfolios',
+            path: '/portfolio',
             component: portfolios,
             context: {
             },
@@ -129,7 +129,7 @@ exports.createPages = ({ graphql, actions }) => {
         if (pages.length > 0) {
           pages.forEach((page) => {
             createPage({
-              path: `/pages/${page}`,
+              path: `/posts/${page}`,
               component: list,
               context: {
               },
@@ -137,7 +137,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
         } else {
           createPage({
-            path: '/pages/1',
+            path: '/posts/1',
             component: list,
             context: {
             },

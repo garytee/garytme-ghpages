@@ -2,12 +2,14 @@
 type: "portfolio"
 title: "12 Oaks Desserts"
 date: "2019-01-04:00:00.000Z"
-path: "/portfolios/12oaksdesserts/"
+path: "/portfolio/12oaksdesserts/"
 images: [
   "12oaks/12oaks.png",
 ]
 attachments:
   - "./12oaks2.png"
+attachments2:
+  - "./12oaks.png"
 ---
 # 12 Oaks Desserts
 

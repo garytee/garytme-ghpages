@@ -2,12 +2,14 @@
 type: "portfolio"
 title: "Red Mango"
 date: "2018-01-04:00:00.000Z"
-path: "/portfolios/redmango/"
+path: "/portfolio/redmango/"
 images: [
   "redmango/redmango.png",
 ]
 attachments:
   - "./redmango2.png"
+attachments2:
+  - "./redmango.png"
 ---
 
 # Red Mango

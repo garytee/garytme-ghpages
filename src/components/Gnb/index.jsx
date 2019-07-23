@@ -118,7 +118,7 @@ const Gnb = ({
         }))
     : [];
   const { pathname } = location;
-  const isPortfolio = pathname.replace(/\/$/, '').startsWith('/portfolios');
+  const isPortfolio = pathname.replace(/\/$/, '').startsWith('/portfolio');
   const isHome = pathname.replace(/\/$/, '') === '';
   const isResume = pathname.replace(/\/$/, '') === '/resume';
   const isPost = !(isPortfolio || isHome || isResume);
@@ -146,7 +146,7 @@ const Gnb = ({
 {/*               </StyledLink> */}
 {/*             </ListMenu> */}
 {/*             <ListMenu> */}
-{/*               <StyledLink to="/pages/1" className={isPost ? 'active' : ''} onClick={toggleMenu}> */}
+{/*               <StyledLink to="/posts/1" className={isPost ? 'active' : ''} onClick={toggleMenu}> */}
 {/*                 Posts */}
 {/*               </StyledLink> */}
 {/*               {categories.length > 0 */}
@@ -184,7 +184,7 @@ const Gnb = ({
 {/*             </ListMenu> */}
             {hasPortfolio ? (
               <ListMenu>
-                <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''} onClick={toggleMenu}>
+                <StyledLink to="/portfolio" className={isPortfolio ? 'active' : ''} onClick={toggleMenu}>
                   Portfolio
                 </StyledLink>
               </ListMenu>
@@ -265,7 +265,7 @@ const Gnb = ({
 {/*           </StyledLink> */}
 {/*         </ListMenu> */}
         <ListMenu>
-          <StyledLink to="/pages/1" className={isPost ? 'active' : ''}>
+          <StyledLink to="/posts/1" className={isPost ? 'active' : ''}>
             Posts
             &nbsp;
             {categories.length > 0 ? <FaCaretDown /> : null}
@@ -305,7 +305,7 @@ const Gnb = ({
         </ListMenu>
         {hasPortfolio ? (
           <ListMenu>
-            <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''}>
+            <StyledLink to="/portfolio" className={isPortfolio ? 'active' : ''}>
               Portfolio
             </StyledLink>
           </ListMenu>

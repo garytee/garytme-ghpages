@@ -2,12 +2,14 @@
 type: "portfolio"
 title: "People of the American Outdoors"
 date: "2019-01-04:00:00.000Z"
-path: "/portfolios/potao/"
+path: "/portfolio/potao/"
 images: [
   "potao/potao.png",
 ]
 attachments:
   - "./potao2.png"
+attachments2:
+  - "./potao.png"
 ---
 
 # People of the American Outdoors

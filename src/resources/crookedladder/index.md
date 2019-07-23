@@ -2,7 +2,7 @@
 type: "portfolio"
 title: "Crooked Ladder"
 date: "2017-01-04:00:00.000Z"
-path: "/portfolios/crookedladder/"
+path: "/portfolio/crookedladder/"
 images: [
   "crookedladder/crookedladder.png",
 ]
@@ -10,6 +10,8 @@ attachments:
   - "./crookedladder2.png"
   - "./crookedladder3.png"
   - "./crookedladder4.png"
+attachments2:
+  - "./crookedladder.png"
 ---
 
 # Crooked Ladder Brewery

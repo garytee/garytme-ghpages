@@ -36,6 +36,14 @@ export const pageQuery = graphql`
             title
             path
             images
+            attachments2 {
+            childImageSharp {
+                fixed(width: 540, quality: 72) {
+                    ...GatsbyImageSharpFixed_withWebp_noBase64
+                }
+            }
+            publicURL
+        }
             date
           }
         }

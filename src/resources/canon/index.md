@@ -2,12 +2,14 @@
 type: "portfolio"
 title: "Canon"
 date: "2016-01-04:00:00.000Z"
-path: "/portfolios/canon/"
+path: "/portfolio/canon/"
 images: [
   "canon/canon.png",
 ]
 attachments:
   - "./canon2.png"
+attachments2:
+  - "./canon.png"
 ---
 
 # Canon

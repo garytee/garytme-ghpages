@@ -2,12 +2,14 @@
 type: "portfolio"
 title: "Vaughn College"
 date: "2018-01-01:00:00.000Z"
-path: "/portfolios/vaughn/"
+path: "/portfolio/vaughn/"
 images: [
   "vaughn/vaughn.png",
 ]
 attachments:
   - "./vaughn2.png"
+attachments2:
+  - "./vaughn.png"
 ---
 
 # Vaughn College

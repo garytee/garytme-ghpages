@@ -85,7 +85,7 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, images, attachme
 {/*       })} */}
 
 
-      {attachments != null && attachments.map((attachment) => {
+      {attachments != null && attachments.map((attachment, i) => {
 {/*         if (attachment.includes('//')) { */}
 {/*           return ( */}
 {/*             <img */}
@@ -100,7 +100,7 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, images, attachme
 
         return (
           <Img
-            key={attachment}
+            key={i}
             fixed={attachment.childImageSharp.fixed}
             alt={title}
           />
