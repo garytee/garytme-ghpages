@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Wrapper from '~/components/Common/Wrapper';
 // import SimpleWrapper from '~/components/Common/SimpleWrapper';
@@ -52,8 +52,27 @@ const Item = posed.li({
 });
 
 
+
+
+
+
 const Home = ({ portfolios }) => (
-  <>
+    <StaticQuery
+    query={graphql`
+      query HeadingQuery {
+            file(relativePath: { eq: "profilepic.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width:125) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }
+      }
+    }
+      }
+    `}
+    render={data => (
+      <>
     <Helmet>
       <title>
         {TITLE}
@@ -63,12 +82,19 @@ const Home = ({ portfolios }) => (
     <Wrapper isHome>
       <Intro>
           <Image initialPose="closed" pose="open"  className="selfie">
-    <img
-            src={profileUrl.default}
-            alt=""
-            width="150"
-            height="150"
-          />
+
+    <Img fixed={data.file.childImageSharp.fixed} />
+
+{/*     <Img fluid={data.file.childImageSharp.fluid} /> */}
+
+{/*     <img */}
+{/*             src={profileUrl.default} */}
+{/*             alt="" */}
+{/*             width="150" */}
+{/*             height="150" */}
+{/*           /> */}
+
+
           </Image>
        <div className="intro">
            <h1>Welcome to my website</h1>
@@ -92,6 +118,8 @@ const Home = ({ portfolios }) => (
           
 
   </>
+    )}
+  />
 );
 
 Home.propTypes = {
@@ -103,3 +131,14 @@ Home.defaultProps = {
 };
 
 export default Home;
+
+
+export const fluidImage = graphql`
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(maxWidth: 1000) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`;

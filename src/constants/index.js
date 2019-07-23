@@ -17,7 +17,7 @@ exports.KEYWORDS = [
   'ReactJS',
 ].join(', ');
 exports.SITE_URL = 'https://www.garyt.me';
-exports.PROFILE = 'https://avatars3.githubusercontent.com/u/42737121?s=200&v=4';
+exports.PROFILE = 'https://garyt.me/static/favicon-0c786412b7ff84f1a6b4c7413672403e.png';
 
 // Social
 exports.GITHUB_ID = 'garytee';

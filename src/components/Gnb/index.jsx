@@ -26,6 +26,9 @@ import {
 } from './styled';
 import * as profileUrl from '~/resources/favicon.png';
 
+const reactStringReplace = require('react-string-replace');
+    // const content = 'Raspberry-Pi';
+
 
 const TOGGLE_MENU = 'TOGGLE_MENU';
 const TOGGLE_SUB_MENU = 'TOGGLE_SUB_MENU';
@@ -261,19 +264,19 @@ const Gnb = ({
 {/*             <Home /> */}
 {/*           </StyledLink> */}
 {/*         </ListMenu> */}
-{/*         <ListMenu> */}
-{/*           <StyledLink to="/pages/1" className={isPost ? 'active' : ''}> */}
-{/*             Posts */}
-{/*             &nbsp; */}
-{/*             {categories.length > 0 ? <FaCaretDown /> : null} */}
-{/*           </StyledLink> */}
-{/*           <SubMenu> */}
-{/*             <div> */}
-{/*               {categories.map(({ key, length }) => { */}
-{/*                 if (key === '__ALL__') { */}
-{/*                   return null; */}
-{/*                 } */}
-{/*  */}
+        <ListMenu>
+          <StyledLink to="/pages/1" className={isPost ? 'active' : ''}>
+            Posts
+            &nbsp;
+            {categories.length > 0 ? <FaCaretDown /> : null}
+          </StyledLink>
+          <SubMenu>
+            <div>
+              {categories.map(({ key, length }) => {
+                if (key === '__ALL__') {
+                  return null;
+                }
+
 {/*                 return ( */}
 {/*                   <li key={key}> */}
 {/*                     <Link to={`/categories/${key}/1`}> */}
@@ -285,10 +288,21 @@ const Gnb = ({
 {/*                     </Link> */}
 {/*                   </li> */}
 {/*                 ); */}
-{/*               })} */}
-{/*             </div> */}
-{/*           </SubMenu> */}
-{/*         </ListMenu> */}
+
+    return (
+      <li key={key}>
+      <Link to={`/categories/${key}/1`}>
+        {reactStringReplace(key, /-(\w+)/g, (match, i) => (
+          <span key={i}>&nbsp;{match}</span>
+        ))}
+        </Link>
+      </li>
+    );
+
+              })}
+            </div>
+          </SubMenu>
+        </ListMenu>
         {hasPortfolio ? (
           <ListMenu>
             <StyledLink to="/portfolios" className={isPortfolio ? 'active' : ''}>

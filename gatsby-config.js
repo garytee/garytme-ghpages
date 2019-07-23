@@ -11,39 +11,15 @@ module.exports = {
   siteMetadata,
   pathPrefix: '/',
   plugins: [
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
-    },
-    {
-     resolve: `gatsby-plugin-typography`,
-     options: {
-      pathToConfigModule: `${__dirname}/src/utils/typography`,
-     },
-    },
-    {
-     resolve: `gatsby-plugin-s3`,
-     options: {
-         bucketName: 'garyt.me',
-         protocol: "https",
-         hostname: "www.garyt.me",
-         acl: null,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/resources`,
-        name: 'resources',
-      },
-    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+          resolve: `gatsby-remark-relative-images`,
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -66,6 +42,26 @@ module.exports = {
           'gatsby-remark-smartypants',
         ],
       },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/resources`,
+        name: 'resources',
+      },
+    },
+    {
+     resolve: `gatsby-plugin-typography`,
+     options: {
+      pathToConfigModule: `${__dirname}/src/utils/typography`,
+     },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',

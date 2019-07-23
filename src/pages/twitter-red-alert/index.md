@@ -1,8 +1,8 @@
 ---
-path: "/post-8/"
-category: "test8"
+path: "/posts/making-a-twitter-alert/"
+category: "Raspberry-Pi"
 tags: ["tag"]
-title: "Tweets inside of post"
+title: "Twitter Red Alert"
 date: "2018-01-08T00:00:00.000Z"
 summary: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
 tweets: [{

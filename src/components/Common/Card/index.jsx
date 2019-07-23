@@ -53,22 +53,22 @@ const Card = ({
             </Truncate>
           </p>
         </Link>
-        <TagWrapper>
-          <FaTags />
-          {tags.map(tag => (
-            <Link
-              key={tag}
-              to={`/tags/${tag}/1`}
-            >
-              <small>
-                {tag}
-              </small>
-            </Link>
-          ))}
-        </TagWrapper>
-        <time>
-          {formattedDate(date)}
-        </time>
+{/*         <TagWrapper> */}
+{/*           <FaTags /> */}
+{/*           {tags.map(tag => ( */}
+{/*             <Link */}
+{/*               key={tag} */}
+{/*               to={`/tags/${tag}/1`} */}
+{/*             > */}
+{/*               <small> */}
+{/*                 {tag} */}
+{/*               </small> */}
+{/*             </Link> */}
+{/*           ))} */}
+{/*         </TagWrapper> */}
+{/*         <time> */}
+{/*           {formattedDate(date)} */}
+{/*         </time> */}
       </div>
     </StyledArticle>
   );

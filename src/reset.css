@@ -81,3 +81,7 @@ button, a, label {
   /*background-color: #3B9CFF;*/
   /*border-radius: 6px;*/
 /*}*/
+
+* {
+	filter: none !important;
+}

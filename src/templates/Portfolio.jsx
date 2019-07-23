@@ -27,6 +27,14 @@ export const pageQuery = graphql`
         title
         images
         portimages
+        test {
+            childImageSharp {
+                fixed(width: 540, quality: 72) {
+                    ...GatsbyImageSharpFixed_withWebp_noBase64
+                }
+            }
+            publicURL
+        }
         date
       }
     }

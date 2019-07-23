@@ -9,6 +9,7 @@ images: [
 portimages: [
   "12oaks/12oaks2.png",
 ]
+test: "./12oaks2.png"
 ---
 
 # 12 Oaks Desserts

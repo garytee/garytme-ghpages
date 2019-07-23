@@ -73,13 +73,14 @@ export const List = styled.ul`
 
 export const SubMenu = styled.ul`
   position: absolute;
-  top: 40px;
+  top: 20px;
   line-height: 1.8em;
   background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
   font-size: 12px;
   font-weight: 500;
   overflow: hidden;
   transition: max-height .4s ease-out .1s;
+  left: 0;
 
   li {
     padding: 6px 12px;

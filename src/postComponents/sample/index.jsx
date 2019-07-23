@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sample = () => (
   <h1>
-    This is small React application
+    This is small React application!
   </h1>
 );
 

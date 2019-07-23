@@ -54,4 +54,9 @@ export const Intro = styled.section`
   list-style-type: none;
 }
 
+.selfie{
+  max-width: 125px;
+  margin: 0 auto;
+}
+
 `;
