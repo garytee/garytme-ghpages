@@ -155,10 +155,10 @@ const Gnb = ({
     }
       }
     `}
-    render={mobiledata => (
+    render={mobilelogodata => (
 
 
-    <Img fixed={mobiledata.file.childImageSharp.fixed} />
+    <Img fixed={mobilelogodata.file.childImageSharp.fixed} />
 
 
     )}
@@ -301,10 +301,10 @@ const Gnb = ({
     }
       }
     `}
-    render={data => (
+    render={logodata => (
 
 
-    <Img fixed={data.file.childImageSharp.fixed} />
+    <Img fixed={logodata.file.childImageSharp.fixed} />
 
 
     )}
