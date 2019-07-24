@@ -126,6 +126,23 @@ const Gnb = ({
   const isPost = !(isPortfolio || isHome || isResume);
 
   return (
+
+        <StaticQuery
+    query={graphql`
+      query gnbQuery {
+            file(relativePath: { eq: "favicon.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width:50) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }
+      }
+    }
+      }
+    `}
+    render={data => (
+      
     <GnbWrapper id="navigation">
       <MobileMenu isActive={isMenuOpened} isSubActive={isSubMenuClosed}>
         <Background onClick={toggleMenu} isActive={isMenuOpened} />
@@ -140,6 +157,7 @@ const Gnb = ({
 {/*             height="50" */}
 {/*           /> */}
 
+    <Img fixed={data.file.childImageSharp.fixed} />
 
 
           </StyledLink>
@@ -264,28 +282,13 @@ const Gnb = ({
 {/*           /> */}
 
 
-    <StaticQuery
-    query={graphql`
-      query gnbQuery {
-            file(relativePath: { eq: "favicon.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width:50) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-      }
-    `}
-    render={data => (
+
 
 
     <Img fixed={data.file.childImageSharp.fixed} />
 
 
-    )}
-  />
+
           </StyledLink>
                   </ListMenu>
 {/*         <ListMenu> */}
@@ -379,6 +382,11 @@ const Gnb = ({
 {/*         ))} */}
 {/*       </SearchedPosts> */}
     </GnbWrapper>
+
+        )}
+  />
+
+
   );
 };
 
@@ -399,3 +407,17 @@ Gnb.defaultProps = {
 export default Gnb;
 
 
+const useSiteMetadata = () => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
+  return site.siteMetadata
+}
