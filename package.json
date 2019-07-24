@@ -51,6 +51,9 @@
     "react-typography": "^0.16.19",
     "sharp": "0.22.1",
     "styled-components": "^4.2.0",
+    "typeface-cabin-condensed": "0.0.72",
+    "typeface-patua-one": "0.0.71",
+    "typeface-roboto": "0.0.75",
     "typography": "^0.16.19",
     "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-funston": "^0.16.19"

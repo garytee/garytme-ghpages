@@ -30,5 +30,9 @@ Now based in Los Angeles, 12 Oaks Desserts bring time-honored baking traditions 
 - Wordpress
 - AJAX
 - Stripe API
+- AWS ec2
+- AWS S3
+- Sass
+- PHP
 
 [Go to Web Site →](https://www.12oaksdesserts.com/)
