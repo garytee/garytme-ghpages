@@ -38,7 +38,7 @@ export default class HTML extends Component {
           {/* <meta name="msapplication-TileImage" content="" /> */}
           {/* <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="" /> */}
           {/* <link rel="apple-touch-icon" type="image/vnd.microsoft.icon" href="" /> */}
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+{/*           <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/> */}
           <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: stylesStr }} />
         </head>
         <body {...bodyAttributes}>
