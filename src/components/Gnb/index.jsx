@@ -1,6 +1,6 @@
 import React, { useReducer, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Link, navigate } from 'gatsby';
+import { Link, navigate, StaticQuery, graphql } from 'gatsby';
 import Toggle from 'react-toggle';
 import { FaCaretDown, FaSearch, FaTags } from 'react-icons/fa';
 import {
@@ -24,7 +24,9 @@ import {
   MobileMenu,
   ToggleWrapper,
 } from './styled';
-import * as profileUrl from '~/resources/favicon.png';
+// import * as profileUrl from '~/resources/favicon.png';
+import Img from 'gatsby-image'
+
 
 const reactStringReplace = require('react-string-replace');
     // const content = 'Raspberry-Pi';
@@ -131,12 +133,38 @@ const Gnb = ({
           <ul>
                  <ListMenu>
         <StyledLink to="/">
-        <img
-            src={profileUrl.default}
-            alt=""
-            width="50"
-            height="50"
-          />
+{/*         <img */}
+{/*             src={profileUrl.default} */}
+{/*             alt="" */}
+{/*             width="50" */}
+{/*             height="50" */}
+{/*           /> */}
+
+
+    <StaticQuery
+    query={graphql`
+      query mobilegnbQuery {
+            file(relativePath: { eq: "favicon.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width:50) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }
+      }
+    }
+      }
+    `}
+    render={data => (
+
+
+    <Img fixed={data.file.childImageSharp.fixed} />
+
+
+    )}
+  />
+
+
           </StyledLink>
                   </ListMenu>
 
@@ -251,12 +279,36 @@ const Gnb = ({
       <List>
              <ListMenu>
         <StyledLink to="/">
-        <img
-            src={profileUrl.default}
-            alt=""
-            width="50"
-            height="50"
-          />
+{/*         <img */}
+{/*             src={profileUrl.default} */}
+{/*             alt="" */}
+{/*             width="50" */}
+{/*             height="50" */}
+{/*           /> */}
+
+
+    <StaticQuery
+    query={graphql`
+      query gnbQuery {
+            file(relativePath: { eq: "favicon.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width:50) {
+          ...GatsbyImageSharpFixed_withWebp_noBase64
+        }
+      }
+    }
+      }
+    `}
+    render={data => (
+
+
+    <Img fixed={data.file.childImageSharp.fixed} />
+
+
+    )}
+  />
           </StyledLink>
                   </ListMenu>
 {/*         <ListMenu> */}
@@ -368,3 +420,5 @@ Gnb.defaultProps = {
 };
 
 export default Gnb;
+
+
