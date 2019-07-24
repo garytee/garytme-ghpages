@@ -99,11 +99,13 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, images, attachme
 {/*         const url = require(`~/resources/${attachment}`); */}
 
         return (
+          <span className="imgwrap">
           <Img
             key={i}
-            fixed={attachment.childImageSharp.fixed}
+            fluid={attachment.childImageSharp.fluid}
             alt={title}
           />
+          </span>
         );
       })}
 

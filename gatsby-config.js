@@ -71,6 +71,7 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-ngrok-tunneling',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

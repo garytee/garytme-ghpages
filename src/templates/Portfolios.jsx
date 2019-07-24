@@ -38,8 +38,8 @@ export const pageQuery = graphql`
             images
             attachments2 {
             childImageSharp {
-                fixed(width: 540, quality: 72) {
-                    ...GatsbyImageSharpFixed_withWebp_noBase64
+                fluid(maxWidth: 540, quality: 72) {
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                 }
             }
             publicURL

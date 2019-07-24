@@ -62,7 +62,11 @@ export const PortfolioDescription = styled.section`
   }
 
 
-width: 50%;
+width: 100%;
+
+  @media (min-width: 414px) {
+    width: 50%;
+  }
 
 `;
 
@@ -70,9 +74,10 @@ export const PortfolioImages = styled.section`
   // float: left;
   // padding: 0 36px 0 0;
   width: 50%;
-  max-height: calc(100vh - 100px);
-  overflow-y: scroll;
-  text-align: center;
+  // max-height: calc(100vh - 100px);
+  // overflow-y: scroll;
+  // text-align: center;
+
 
   @media (max-width: 414px) {
     float: none;
@@ -82,24 +87,32 @@ export const PortfolioImages = styled.section`
     overflow-y: visible;
   }
 
-  img {
-   /*  padding: 16px;
-    width: 100%;
-    height: auto; */
-    padding: 16px;
-    max-width: 100%;
+  .imgwrap{
     display: block;
+    text-align: center;
     margin: 0 auto;
-
-    @media (max-width: 414px) {
-      float: left;
-      margin: 0 0 8px;
-      padding: 0;
-      &:last-child {
-        margin: 0 0 16px;
-      }
-    }
+    max-width: 540px;
+        margin-top: 20px;
   }
+
+  // img {
+  //  // padding: 16px;
+  //  //  width: 100%;
+  //  //  height: auto; 
+  //   padding: 16px;
+  //   max-width: 100%;
+  //   display: block;
+  //   margin: 0 auto;
+
+  //   @media (max-width: 414px) {
+  //     float: left;
+  //     margin: 0 0 8px;
+  //     padding: 0;
+  //     &:last-child {
+  //       margin: 0 0 16px;
+  //     }
+  //   }
+  // }
 
   ::-webkit-scrollbar {
     width: 4px;

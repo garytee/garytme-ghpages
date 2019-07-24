@@ -116,7 +116,7 @@ const Portfolios = ({ data: { portfolios: { edges: portfolios } } }) => (
         return (
           <Img
             key={i}
-            fixed={attachment2.childImageSharp.fixed}
+            fluid={attachment2.childImageSharp.fluid}
             alt={title}
           />
         );

@@ -10,10 +10,16 @@ export const Wrapper = styled.div`
 width: 100%;
 
   @media (min-width: 414px) {
-      width: calc(1/2*100% - (1 - 1/2)*20px);
+      // width: calc(1/2*100% - (1 - 1/2)*20px);
+      width: 100%;
   }
 
     @media (min-width: 768px) {
+      // width: calc(1/3*100% - (1 - 1/3)*30px);
+      width: calc(1/2*100% - (1 - 1/2)*20px);
+  }
+
+    @media (min-width: 1200px) {
       width: calc(1/3*100% - (1 - 1/3)*30px);
   }
 

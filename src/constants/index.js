@@ -23,7 +23,7 @@ exports.PROFILE = 'https://garyt.me/static/favicon-0c786412b7ff84f1a6b4c74136724
 exports.GITHUB_ID = 'garytee';
 exports.TWITTER_ID = 'Garytietjen';
 exports.FACEBOOK_ID = '556163624';
-exports.LINKEDIN_ID = 'garytietjen';
+exports.LINKEDIN_ID = 'gary-tietjen-a6a36b49';
 
 // Disqus (Recommend you to use this)
 exports.DISQUS_ID = 'garytme';

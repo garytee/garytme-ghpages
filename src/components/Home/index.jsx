@@ -13,6 +13,10 @@ import * as profileUrl from '~/resources/profilepic.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
+import { FaPrint, FaGithub, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { PREFIX, AUTHOR, EMAIL, GITHUB_ID, TWITTER_ID, FACEBOOK_ID, LINKEDIN_ID } from '~/constants';
+
 const Image = posed.div({
   // closed: { x: "100px", delay: 3000 },
   // open: { x: "0px", delay: 3000 },
@@ -104,9 +108,53 @@ const Home = ({ portfolios }) => (
  </div> 
 
      <List className="contactlinks" initialPose="open" pose="closed">
-      <Item><FontAwesomeIcon icon={["fab", "facebook"]} style={{color:"#2464A7"}} size="lg" /></Item>
-      <Item><FontAwesomeIcon icon={["fab", "linkedin"]} style={{color:"#2464A7"}} size="lg" /></Item>
-      <Item><FontAwesomeIcon icon={["fas", "envelope"]} style={{color:"#2464A7"}} size="lg" /></Item>
+{/*       <Item><FontAwesomeIcon icon={["fab", "facebook"]} style={{color:"#2464A7"}} size="lg" /></Item> */}
+{/*       <Item><FontAwesomeIcon icon={["fab", "linkedin"]} style={{color:"#2464A7"}} size="lg" /></Item> */}
+{/*       <Item><FontAwesomeIcon icon={["fas", "envelope"]} style={{color:"#2464A7"}} size="lg" /></Item> */}
+<Item>    
+{GITHUB_ID ? (
+            <a
+              href={`https://github.com/${GITHUB_ID}`}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaGithub />
+            </a>
+          ) : null}
+</Item>
+<Item>
+          {TWITTER_ID ? (
+            <a
+              href={`https://twitter.com/${TWITTER_ID}`}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaTwitter />
+            </a>
+          ) : null}
+</Item>
+<Item>
+          {FACEBOOK_ID ? (
+            <a
+              href={`https://www.facebook.com/${FACEBOOK_ID}`}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaFacebook />
+            </a>
+          ) : null}
+</Item>
+<Item>
+          {LINKEDIN_ID ? (
+            <a
+              href={`https://www.linkedin.com/in/${LINKEDIN_ID}/`}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaLinkedin />
+            </a>
+          ) : null}
+</Item>
     </List>
 
  </Intro>
