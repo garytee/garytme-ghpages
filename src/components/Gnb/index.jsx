@@ -155,10 +155,10 @@ const Gnb = ({
     }
       }
     `}
-    render={data => (
+    render={mobiledata => (
 
 
-    <Img fixed={data.file.childImageSharp.fixed} />
+    <Img fixed={mobiledata.file.childImageSharp.fixed} />
 
 
     )}
