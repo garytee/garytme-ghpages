@@ -141,29 +141,6 @@ const Gnb = ({
 {/*           /> */}
 
 
-    <StaticQuery
-    query={graphql`
-      query mobilegnbQuery {
-            file(relativePath: { eq: "favicon.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width:50) {
-          ...GatsbyImageSharpFixed_withWebp_noBase64
-        }
-      }
-    }
-      }
-    `}
-    render={mobilelogodata => (
-
-
-    <Img fixed={mobilelogodata.file.childImageSharp.fixed} />
-
-
-    )}
-  />
-
 
           </StyledLink>
                   </ListMenu>
@@ -301,10 +278,10 @@ const Gnb = ({
     }
       }
     `}
-    render={logodata => (
+    render={data => (
 
 
-    <Img fixed={logodata.file.childImageSharp.fixed} />
+    <Img fixed={data.file.childImageSharp.fixed} />
 
 
     )}
