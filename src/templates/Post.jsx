@@ -29,6 +29,14 @@ export const pageQuery = graphql`
         title
         path
         images
+        heroimages {
+            childImageSharp {
+                fluid(maxWidth: 720) {
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+            }
+            publicURL
+        }
         category
         tags
         date

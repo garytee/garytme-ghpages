@@ -1,4 +1,5 @@
 ---
+hide: true
 path: "/posts/making-a-twitter-alert/"
 category: "Raspberry-Pi"
 tags: ["tag"]

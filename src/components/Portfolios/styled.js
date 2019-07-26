@@ -14,4 +14,8 @@ export const Wrapper = styled(SimpleWrapper)`
   	margin-top: 80px;
   	justify-content: space-between;
   }
+
+  ul li{
+    list-style: none;
+  }
 `;

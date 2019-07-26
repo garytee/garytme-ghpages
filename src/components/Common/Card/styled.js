@@ -55,9 +55,9 @@ export const StyledArticle = styled.article`
     border-radius: 6px;
     border: 1px solid #e5e5e5;
 
-    &:hover {
-      top: -8px;
-    }
+    // &:hover {
+    //   top: -8px;
+    // }
   }
 
   a {

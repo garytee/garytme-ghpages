@@ -11,6 +11,7 @@ import PostWrapper from '~/components/Common/PostWrapper';
 import { PREFIX, SITE_URL, DISQUS_ID } from '~/constants';
 import formattedDate from '~/utils/formattedDate';
 import { Tags, PostContent, ImageWrapper, ComponentInPost } from './styled';
+import Img from 'gatsby-image'
 
 const PostTemplate = ({
   data: {
@@ -19,6 +20,7 @@ const PostTemplate = ({
       frontmatter: {
         title,
         date,
+        heroimages,
         tags = [],
         images = [],
         tweets = [],
@@ -132,36 +134,49 @@ const PostTemplate = ({
         </title>
         <meta name="og:title" content={`${PREFIX}${title}`} />
       </Helmet>
-      {image === null ? null : (
-        <ImageWrapper>
-          <img
-            src={image.includes('//') ? image : require(`~/resources/${image}`)}
-            alt={title}
-          />
-        </ImageWrapper>
-      )}
+{/*       {image === null ? null : ( */}
+{/*         <ImageWrapper> */}
+{/*           <img */}
+{/*             src={image.includes('//') ? image : require(`~/resources/${image}`)} */}
+{/*             alt={title} */}
+{/*           /> */}
+{/*         </ImageWrapper> */}
+{/*       )} */}
+
+
+  {heroimages != null && heroimages.map((heroimage, i) => {
+    return (
+      <Img
+      key={i}
+      fluid={heroimage.childImageSharp.fluid}
+      alt={title}
+      />
+      );
+  })}
+
+
       <h1>
         {title}
       </h1>
-      <time>
-        {formattedDate(date)}
-      </time>
-      {tags.length === 0 ? null : (
-        <Tags>
-          <FaTags />
-          {tags.map(tag => (
-            <Link
-              key={tag}
-              to={`/tags/${tag}/1`}
-            >
-              <small>
-                {tag}
-              </small>
-            </Link>
-          ))}
-        </Tags>
-      )}
-      <Bio />
+{/*       <time> */}
+{/*         {formattedDate(date)} */}
+{/*       </time> */}
+{/*       {tags.length === 0 ? null : ( */}
+{/*         <Tags> */}
+{/*           <FaTags /> */}
+{/*           {tags.map(tag => ( */}
+{/*             <Link */}
+{/*               key={tag} */}
+{/*               to={`/tags/${tag}/1`} */}
+{/*             > */}
+{/*               <small> */}
+{/*                 {tag} */}
+{/*               </small> */}
+{/*             </Link> */}
+{/*           ))} */}
+{/*         </Tags> */}
+{/*       )} */}
+{/*       <Bio /> */}
       <PostContent>
         <div id="post-contents" dangerouslySetInnerHTML={{ __html: html }} />
       </PostContent>

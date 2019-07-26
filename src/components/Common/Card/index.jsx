@@ -5,11 +5,13 @@ import Truncate from 'react-truncate';
 import { FaTags } from 'react-icons/fa';
 import formattedDate from '~/utils/formattedDate';
 import { ImageWrapper, TagWrapper, StyledArticle } from './styled';
+import Img from 'gatsby-image'
 
 const Card = ({
   tags,
   path,
   images,
+  heroimages,
   title,
   date,
   summary,
@@ -20,14 +22,28 @@ const Card = ({
     <StyledArticle>
       <div>
         <Link to={path}>
-          <ImageWrapper>
-            {image === null ? null : (
-              <img
-                src={image.includes('//') ? image : require(`~/resources/${image}`)}
-                alt={title}
-              />
-            )}
-          </ImageWrapper>
+{/*           <ImageWrapper> */}
+{/*             {image === null ? null : ( */}
+{/*               <img */}
+{/*                 src={image.includes('//') ? image : require(`~/resources/${image}`)} */}
+{/*                 alt={title} */}
+{/*               /> */}
+{/*             )} */}
+{/*           </ImageWrapper> */}
+
+
+  {heroimages != null && heroimages.map((heroimage, i) => {
+    return (
+      <Img
+      key={i}
+      fluid={heroimage.childImageSharp.fluid}
+      alt={title}
+      />
+      );
+  })}
+
+
+  
           <h3>
             <Truncate
               lines={2}

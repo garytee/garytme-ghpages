@@ -11,6 +11,8 @@ components: [{
   fileName: 'sample',
 }]
 images: ["images/3.png"]
+heroimages: 
+    - "./3.png"
 ---
 
 <div id="sample-component"></div>
