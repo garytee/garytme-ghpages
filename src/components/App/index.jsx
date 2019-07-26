@@ -79,11 +79,11 @@ export default class App extends Component {
     } = this.props;
     const { isDracula } = this.state;
     const theme = isDracula ? {
-      color: BLACK_COLOR,
-      backgroundColor: WHITE_COLOR,
-    } : {
       color: WHITE_COLOR,
       backgroundColor: BLACK_COLOR,
+    } : {
+      color: BLACK_COLOR,
+      backgroundColor: WHITE_COLOR,
     };
 
     return (
