@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.garyt.me/sitemap.xml
+Host: https://www.garyt.me
