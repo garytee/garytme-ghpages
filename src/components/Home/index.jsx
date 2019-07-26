@@ -103,7 +103,7 @@ const Home = ({ portfolios }) => (
        <div className="intro">
            <h1>Welcome to my website</h1>
 {/*     <h1>I'm Gary. I <span role="img" aria-label="love">&#10084;</span> making things!</h1>  */}
-    <p>I'm Gary, I make websites and other fun stuff</p>
+{/*     <p>I'm Gary, I make websites and other fun stuff</p> */}
 
  </div> 
 

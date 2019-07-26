@@ -4,134 +4,44 @@ import Helmet from 'react-helmet';
 import { PREFIX } from '~/constants';
 import { Wrapper, PortfolioDescription, PortfolioImages } from './styled';
 import Img from 'gatsby-image'
-
-const Portfolio = ({ data: { portfolio: { frontmatter: { title, images, attachments }, html } } }) => (
+const Portfolio = ({ data: { portfolio: { frontmatter: { title, portfolioimages }, html } } }) => (
   <Wrapper>
-    <Helmet>
-      <title>
-        {`${PREFIX}${title.toUpperCase()}`}
-      </title>
-      <meta name="og:title" content={`${PREFIX}${title.toUpperCase()}`} />
-    </Helmet>
-    <PortfolioDescription>
-      <section dangerouslySetInnerHTML={{ __html: html }} />
-    </PortfolioDescription>
-    <PortfolioImages>
-{/*       {portimages.map((portimage) => { */}
-{/*         if (portimage.includes('//')) { */}
-{/*           return ( */}
-{/*             <img */}
-{/*               key={portimage} */}
-{/*               src={portimage} */}
-{/*               alt={title} */}
-{/*             /> */}
-{/*           ); */}
-{/*         } */}
-{/*  */}
-{/*         const url = require(`~/resources/${portimage}`); */}
-{/*  */}
-{/*         return ( */}
-{/*           <img */}
-{/*             key={portimage} */}
-{/*             src={url} */}
-{/*             alt={title} */}
-{/*           /> */}
-{/*         ); */}
-{/*       })} */}
+  <Helmet>
+  <title>
+  {`${PREFIX}${title.toUpperCase()}`}
+  </title>
+  <meta name="og:title" content={`${PREFIX}${title.toUpperCase()}`} />
+  </Helmet>
+  <PortfolioDescription>
+  <section dangerouslySetInnerHTML={{ __html: html }} />
+  </PortfolioDescription>
+  <PortfolioImages>
+  <span className="imgwrap">
+{/*   {attachments != null && attachments.map((attachment, i) => { */}
+{/*     return ( */}
+{/*       <Img */}
+{/*       key={i} */}
+{/*       fluid={attachment.childImageSharp.fluid} */}
+{/*       alt={title} */}
+{/*       /> */}
+{/*       ); */}
+{/*   })} */}
 
+  {portfolioimages != null && portfolioimages.map((portfolioimage, i) => {
+    return (
+      <Img
+      key={i}
+      fluid={portfolioimage.childImageSharp.fluid}
+      alt={title}
+      />
+      );
+  })}
 
-{/*             {node.frontmatter.image != null && */}
-{/*             <Img sizes={node.frontmatter.image.childImageSharp.sizes} /> */}
-{/*             } */}
-
-
-{/* {!!test && !!test.childImageSharp */}
-{/*           ? <Img fluid={test.childImageSharp.fluid} */}
-{/*                  alt={title} */}
-{/*             /> */}
-{/*           : <img src={test.publicURL} */}
-{/*                  alt={title}  */}
-{/*            /> */}
-{/*         } */}
-
-
-{/*                   {test != null && */}
-{/*  */}
-{/*  <Img fixed={test.childImageSharp.fixed} alt={title} /> */}
-{/* } */}
-
-
-
-{/*       {portimages.map((portimage) => { */}
-{/*         if (portimage.includes('//')) { */}
-{/*           return ( */}
-{/*             <img */}
-{/*               key={portimage} */}
-{/*               src={portimage} */}
-{/*               alt={title} */}
-{/*             /> */}
-{/*           ); */}
-{/*         } */}
-{/*  */}
-{/*         const url = require(`~/resources/${portimage}`); */}
-{/*  */}
-{/*         return ( */}
-{/*           <img */}
-{/*             key={portimage} */}
-{/*             src={url} */}
-{/*             alt={title} */}
-{/*           /> */}
-{/*         ); */}
-{/*       })} */}
-
-
-      {attachments != null && attachments.map((attachment, i) => {
-{/*         if (attachment.includes('//')) { */}
-{/*           return ( */}
-{/*             <img */}
-{/*               key={attachment} */}
-{/*               src={attachment} */}
-{/*               alt={title} */}
-{/*             /> */}
-{/*           ); */}
-{/*         } */}
-{/*  */}
-{/*         const url = require(`~/resources/${attachment}`); */}
-
-        return (
-          <span className="imgwrap">
-          <Img
-            key={i}
-            fluid={attachment.childImageSharp.fluid}
-            alt={title}
-          />
-          </span>
-        );
-      })}
-
-
-
-
-
-
-{/*                   {phoneimg != null && */}
-{/*  */}
-{/*  <Img fixed={phoneimg.childImageSharp.fixed} alt={title} /> */}
-{/* } */}
-
-{/*                   {test != null && */}
-{/*  */}
-{/*  <Img fixed={test.childImageSharp.fixed} alt={title} /> */}
-{/* } */}
-
-
-
-    </PortfolioImages>
+  </span>
+  </PortfolioImages>
   </Wrapper>
-);
-
+  );
 Portfolio.propTypes = {
   data: PropTypes.shape({ date: PropTypes.object }).isRequired,
 };
-
 export default Portfolio;

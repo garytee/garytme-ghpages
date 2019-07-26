@@ -26,7 +26,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         images
-        attachments {
+        portfolioimages {
             childImageSharp {
                 fluid(maxWidth: 540) {
                     ...GatsbyImageSharpFluid_withWebp_noBase64

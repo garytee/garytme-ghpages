@@ -6,60 +6,8 @@ import { Link } from 'gatsby';
 import { PREFIX } from '~/constants';
 import { Wrapper } from './styled';
 import Img from 'gatsby-image'
-
-
-// const Item = posed.li({
-//   closed: { y: 0, opacity: 1 },
-//   open: { y: 20, opacity: 0 }
-// });
-
 import posed from 'react-pose';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
-// // const PortfolioCards = posed.ul({
-// //   closed: {
-// //     x: '0%',
-// //     delayChildren: 1000,
-// //     staggerChildren: 100
-// //   },
-// //   open: { 
-// //     x: '-100%', 
-// //     delay: 300,
-// //     delayChildren: 1000,
-// //     staggerChildren: 100
-// //   }
-// // });
-
-
-// const PortfolioCards = posed.ul({
-//   closed: {
-//     x: '0%',
-//     delayChildren: 1000,
-//     staggerChildren: 100
-//   },
-//   open: { x: '-100%', delayChildren: 5000,
-//     staggerChildren: 100 }
-// });
-
-// // const PortfolioCard = posed.li({
-// //   closed: { y: 0, opacity: 1 },
-// //   open: { y: 20, opacity: 0 }
-// // });
-
-// const PortfolioCards = posed.ul({
-//   open: {
-//     x: '0%',
-//     delayChildren: 200,
-//     staggerChildren: 50
-//   },
-//   closed: { x: '-100%', delay: 300 }
-// });
-
-// const PortfolioCard = posed.li({
-//   open: { y: 0, opacity: 1 },
-//   closed: { y: 20, opacity: 0 }
-// });
 
 
 const PortfolioCards = posed.ul({
@@ -85,38 +33,20 @@ const Portfolios = ({ data: { portfolios: { edges: portfolios } } }) => (
       <meta name="og:title" content={`${PREFIX}PORTFOLIOS`} />
     </Helmet>
     <PortfolioCards initialPose="closed" pose="open" className="portfolio_cards">
-    {portfolios.map(({ node: { frontmatter: { attachments2, path, title, images = [] } } }) => {
-      const [image = null] = images;
-
-      if (image !== null) {
+    {portfolios.map(({ node: { frontmatter: { portfoliosimages, path, title = [] } } }) => {
         return (
           <PortfolioCard initialPose="closed" pose="open" className="portfolio_card" key={path}>
             <Link to={path}>
-{/*               {image.includes('//') ? ( */}
-{/*                 <img src={image} alt="portfolio" /> */}
-{/*               ) : ( */}
-{/*                 <img src={require(`~/resources/${image}`)} alt="portfolio" /> */}
-{/*               )} */}
 
 
 
-      {attachments2 != null && attachments2.map((attachment2, i) => {
-{/*         if (attachment.includes('//')) { */}
-{/*           return ( */}
-{/*             <img */}
-{/*               key={attachment} */}
-{/*               src={attachment} */}
-{/*               alt={title} */}
-{/*             /> */}
-{/*           ); */}
-{/*         } */}
-{/*  */}
-{/*         const url = require(`~/resources/${attachment}`); */}
+
+      {portfoliosimages != null && portfoliosimages.map((portfoliosimage, i) => {
 
         return (
           <Img
             key={i}
-            fluid={attachment2.childImageSharp.fluid}
+            fluid={portfoliosimage.childImageSharp.fluid}
             alt={title}
           />
         );
@@ -124,15 +54,9 @@ const Portfolios = ({ data: { portfolios: { edges: portfolios } } }) => (
 
 
 
-
-
-{/*               <h6> */}
-{/*                 {title} */}
-{/*               </h6> */}
             </Link>
           </PortfolioCard>
         );
-      }
 
       return (
         <PortfolioCard key={path}>

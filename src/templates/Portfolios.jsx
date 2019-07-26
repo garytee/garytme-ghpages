@@ -36,7 +36,7 @@ export const pageQuery = graphql`
             title
             path
             images
-            attachments2 {
+            portfoliosimages {
             childImageSharp {
                 fluid(maxWidth: 540, quality: 72) {
                     ...GatsbyImageSharpFluid_withWebp_noBase64

@@ -3,12 +3,9 @@ type: "portfolio"
 title: "Brother"
 date: "2018-01-04:00:00.000Z"
 path: "/portfolio/brother/"
-images: [
-  "brother/brother.png",
-]
-attachments:
+portfolioimages:
   - "./brother2.png"
-attachments2:
+portfoliosimages:
   - "./brother.png"
 ---
 

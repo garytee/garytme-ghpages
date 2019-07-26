@@ -3,12 +3,9 @@ type: "portfolio"
 title: "COPE Psychiatry"
 date: "2019-01-04:00:00.000Z"
 path: "/portfolio/cope/"
-images: [
-  "cope/cope.png",
-]
-attachments:
+portfolioimages:
   - "./cope2.png"
-attachments2:
+portfoliosimages:
   - "./cope.png"
 ---
 

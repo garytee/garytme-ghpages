@@ -7,7 +7,7 @@ export const Hamburger = styled.div`
   position: fixed;
   display: none;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 5000;
 
   @media (max-width: 414px) {
@@ -296,12 +296,12 @@ export const MobileMenus = styled.div`
   display: none;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   padding: 0 16px;
   width: 80%;
   height: 100%;
   background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
-  transition: left.4s ease-out .1s;
+  transition: right.4s ease-out .1s;
   z-index: 3;
   overflow-y: auto;
 
@@ -315,7 +315,7 @@ export const MobileMenu = styled.section`
   display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   z-index: 99;
@@ -350,7 +350,7 @@ export const MobileMenu = styled.section`
   }
 
   & > div + div {
-    left: ${({ isActive }) => (isActive ? '0' : '-100%')};
+    right: ${({ isActive }) => (isActive ? '0' : '-100%')};
     box-shadow: ${({ isActive }) => (isActive ? '0 2px 4px rgba(0,0,0,0.2)' : '0 0 0')};
     box-shadow: ${({ isActive }) => (isActive ? '0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08)' : '0 0 0')};
   }
@@ -363,9 +363,10 @@ export const ToggleWrapper = styled.label`
   z-index: 3;
 
   @media (max-width: 414px) {
-    top: 15px;
+    // top: 15px;
+    top: 0px;
     right: auto;
-    left: 16px;
+    right: 16px;
   }
 
   .react-toggle {

@@ -3,12 +3,9 @@ type: "portfolio"
 title: "12 Oaks Desserts"
 date: "2019-01-04:00:00.000Z"
 path: "/portfolio/12oaksdesserts/"
-images: [
-  "12oaks/12oaks.png",
-]
-attachments:
+portfolioimages:
   - "./12oaks2.png"
-attachments2:
+portfoliosimages:
   - "./12oaks.png"
 ---
 # 12 Oaks Desserts
@@ -27,6 +24,7 @@ Now based in Los Angeles, 12 Oaks Desserts bring time-honored baking traditions 
 - Pick up/Drop off scheduling
 
 ## Libraries / Tools
+### Hosting
 - Wordpress
 - AJAX
 - Stripe API
