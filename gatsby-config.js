@@ -24,10 +24,11 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1000,
-              withWebp: true
+              withWebp: true,
+              linkImagesToOriginal: false,
             },
           },
-          'gatsby-remark-images-modal',
+          `gatsby-remark-images-modal`,
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
@@ -38,6 +39,12 @@ module.exports = {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'hljs-',
+            },
+          },
+          {
+            resolve: 'gatsby-plugin-remove-console',
+            options: {
+              exclude: ['error', 'warn'], // <- will be removed all console calls except these
             },
           },
           'gatsby-remark-copy-linked-files',
