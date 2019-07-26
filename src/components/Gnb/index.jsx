@@ -257,8 +257,8 @@ const Gnb = ({
         <Toggle
           defaultChecked={isDracula}
           icons={{
-            checked: <span role="img" aria-label="change-theme">🌙</span>,
-            unchecked: <span role="img" aria-label="change-theme">☀️</span>,
+            checked: <span role="img" aria-label="change-theme">☀️</span>,
+            unchecked: <span role="img" aria-label="change-theme">🌙</span>,
           }}
           onChange={toggleTheme}
         />
