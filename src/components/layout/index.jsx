@@ -4,11 +4,12 @@ import { StaticQuery, graphql } from 'gatsby';
 import { POST, PORTFOLIO } from '~/constants';
 import App from '~/components/App';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, fas  } from '@fortawesome/pro-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fal } from '@fortawesome/pro-light-svg-icons';
+import { faCheckSquare, faCoffee, fas  } from '@fortawesome/pro-solid-svg-icons';
 
-library.add(fab, fas, faCheckSquare, faCoffee)
+library.add(fab, fas, fal, faCheckSquare, faCoffee)
 
 const Layout = ({ children, location }) => (
   <StaticQuery

@@ -28,10 +28,17 @@ Experienced Web Developer with strong interpersonal skills and enthusiasm for in
   - 2008 ~ 2012
 
 ## Skills
-- JavaScript
-  - ES2015+
-  - ReactJS
-  - Lodash
-- CSS
-  - SASS
-  - Less
+- Hosting
+  - Amazon EC2
+  - Cloudfront
+  - S3
+  - Ubuntu
+  - Apache
+  - NGINX
+  - Let's Encrypt
+  - Cloudflare
+- Programming
+  - Javascript
+  - PHP
+  - Python
+

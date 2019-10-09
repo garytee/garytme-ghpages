@@ -3,6 +3,7 @@ type: "portfolio"
 title: "Hopsteiner"
 date: "2018-01-04:00:00.000Z"
 path: "/portfolio/hopsteiner/"
+websiteurl: "https://www.hopsteiner.com/"
 portfolioimages:
   - "./hopsteiner2.png"
 portfoliosimages:
@@ -25,4 +26,3 @@ Hopsteiner was in need of a website redesign that would reach a more global audi
 - Wordpress
 - WPML
 
-[Go to Web Site →](https://www.hopsteiner.com/)

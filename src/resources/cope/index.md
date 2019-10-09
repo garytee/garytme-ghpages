@@ -3,6 +3,7 @@ type: "portfolio"
 title: "COPE Psychiatry"
 date: "2019-01-04:00:00.000Z"
 path: "/portfolio/cope/"
+websiteurl: "https://www.copepsychiatry.com/"
 portfolioimages:
   - "./cope2.png"
 portfoliosimages:
@@ -27,4 +28,3 @@ COPE needed a website for patients to learn about treatment for illnesses such a
 - Stripe API
 - Google Maps API
 
-[Go to Web Site →](http://www.copepsychiatry.com/)

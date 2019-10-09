@@ -3,6 +3,7 @@ type: "portfolio"
 title: "Vaughn College"
 date: "2018-01-01:00:00.000Z"
 path: "/portfolio/vaughn/"
+websiteurl: "https://www.vaughn.edu/"
 portfolioimages:
   - "./vaughn2.png"
 portfoliosimages:
@@ -23,5 +24,3 @@ Vaughn College seeked a modern, responsive website to make it easier for current
 
 ## Libraries / Tools
 - Wordpress
-
-[Go to Web Site →](https://www.vaughn.edu/)

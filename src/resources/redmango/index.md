@@ -3,6 +3,7 @@ type: "portfolio"
 title: "Red Mango"
 date: "2018-01-04:00:00.000Z"
 path: "/portfolio/redmango/"
+websiteurl:
 portfolioimages:
   - "./redmango2.png"
 portfoliosimages:

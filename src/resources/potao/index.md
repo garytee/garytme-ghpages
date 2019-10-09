@@ -3,6 +3,7 @@ type: "portfolio"
 title: "People of the American Outdoors"
 date: "2019-01-04:00:00.000Z"
 path: "/portfolio/potao/"
+websiteurl: "https://www.peopleoftheamericanoutdoors.com/"
 portfolioimages:
   - "./potao2.png"
 portfoliosimages:
@@ -25,5 +26,3 @@ Tolin had already been successful on Etsy selling various products such as shirt
 - Wordpress
 - AJAX
 - Stripe API
-
-[Go to Web Site →](https://www.peopleoftheamericanoutdoors.com/)

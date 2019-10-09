@@ -3,6 +3,7 @@ type: "portfolio"
 title: "Canon"
 date: "2016-01-04:00:00.000Z"
 path: "/portfolio/canon/"
+websiteurl: 
 portfolioimages:
   - "./canon2.png"
 portfoliosimages:

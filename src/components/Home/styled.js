@@ -30,11 +30,15 @@ export const Intro = styled.section`
 
   h1 {
   // @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
-  font-size: 48px;
+  font-size: 32px;
+  margin: 20px;
   // font-family: lato;
   // font-family: 'Kaushan Script', cursive;
   }
-
+h2{
+  font-size: 20px;
+  margin: 20px;
+}
   p {
     margin: .67em 0;
       // font-family: lato;
@@ -46,12 +50,27 @@ export const Intro = styled.section`
   }
 
   .contactlinks{
+
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 200px;
+  max-width: 400px;
   list-style-type: none;
+  margin-top: 40px;
+  font-size: 20px;
+
+  @media (min-width: 414px) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 400px;
+  list-style-type: none;
+  margin-top: 40px;
+  font-size: 30px;
+  }
 }
 
 .selfie{

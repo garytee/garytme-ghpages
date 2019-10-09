@@ -54,6 +54,13 @@ export const GnbWrapper = styled.div`
   z-index: 3000;
   background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 
+&.scrolled{
+      transition: all .5s ease;
+    -webkit-box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
+    -moz-box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
+    box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
+}
+
   @media (max-width: 414px) {
     height: 60px;
     line-height: 60px;
@@ -339,7 +346,7 @@ export const MobileMenu = styled.section`
 
     & > ul {
       position: static;
-      max-height: ${({ isSubActive }) => (isSubActive ? '0' : '360px')} !important;
+      max-height: ${({ isSubActive }) => (isSubActive ? '360px' : '0')} !important;
 
       li {
         @media (max-width: 414px) {

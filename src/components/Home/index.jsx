@@ -101,7 +101,9 @@ const Home = ({ portfolios }) => (
 
           </Image>
        <div className="intro">
-           <h1>Welcome to my website</h1>
+           <h1>Gary Tietjen</h1>
+           <h2>Web Developer</h2>
+           <h3>Queens, NY</h3>
 {/*     <h1>I'm Gary. I <span role="img" aria-label="love">&#10084;</span> making things!</h1>  */}
 {/*     <p>I'm Gary, I make websites and other fun stuff</p> */}
 
