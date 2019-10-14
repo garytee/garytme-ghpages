@@ -161,9 +161,9 @@ const Home = ({ portfolios }) => (
 
  </Intro>
  
-      <Title>
+{/*       <Title> */}
 {/*         Hello, Blog! */}
-      </Title>
+{/*       </Title> */}
     </Wrapper>
           
 

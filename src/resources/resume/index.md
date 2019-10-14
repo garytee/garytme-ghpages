@@ -9,25 +9,24 @@ path: "/resume/"
 Experienced Web Developer with strong interpersonal skills and enthusiasm for innovative technology. 
 
 ## Experience
-- ### Owner & Full Stack Developer at Chorusy ∙ 2016 ~ Present
-  - Managing all remote communication with clients and designers to build and revamp e-commerce websites in a timely, efficient manner
-  - Advising clients on UX best practices, information architecture, and SEO optimization
-  - Clients include: COPE Psychiatry and 12 Oaks Desserts
-  - Developing e-commerce CMS websites using modern web technology and languages
-- ### Full Stack Developer at EGC Group ∙ 2014 ~ 2016
-  - Developed Wordpress websites and web updates for various clients, including Vaughn College, Hopsteiner, Culinart Group, Touro College, Red Mango, Canon, Brother, Crooked Ladder Brewery, Project Runway
-  - Led web development team in completing web projects on schedule
-  - Initiated and built a raspberry-pi-powered digital in-house menu for Crooked Ladder Brewery
+- ### Owner at Chorusy ∙ 2016 ~ Present
+  - Work one on one with clients to assess website needs & strategy
+  - Advise clients on UX best practices, information architecture, and SEO optimization
+  - Collaborate with designers, developers, & SEO specialists to efficiently develop website
+- ### Lead Web Developer at EGC Group ∙ 2014 ~ 2016
+  - Collaborate with project managers, designers, & dev team to plan & build websites on schedule
+  - Provide insight to project managers & clients on best practices
+  - Develop interactive digital signage
 - ### IT Coordinator at David Lerner Associates ∙ 2008 ~ 2012
-  - Travel to new office locations and assist in the setup of computer equipment & security.
-  - Train company staff on proper security measures.
-  - Provide in person as well as remote help to employees in New York, New Jersey, Connecticut & Florida.
+  - Provide in person & remote help to employees in New York, New Jersey, Connecticut & Florida
+  - Train company staff on proper security measures
+  - Travel to new office locations and assist in the setup of computer equipment & security
 
 ## Education
 - B.A. in Business Management at Pace University
   - 2008 ~ 2012
 
-## Skills
+<!-- ## Skills
 - Hosting
   - Amazon EC2
   - Cloudfront
@@ -40,5 +39,5 @@ Experienced Web Developer with strong interpersonal skills and enthusiasm for in
 - Programming
   - Javascript
   - PHP
-  - Python
+  - Python -->
 
