@@ -45,9 +45,10 @@ const List = posed.ul({
   closed: {
     x: '0%',
     delayChildren: 1000,
-    staggerChildren: 100
+    staggerChildren: 100,
+    opacity: 1
   },
-  open: { x: '-100%', delay: 300 }
+  open: { x: '-100%', delay: 300, opacity: 0 }
 });
 
 const Item = posed.li({
