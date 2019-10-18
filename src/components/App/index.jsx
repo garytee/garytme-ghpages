@@ -102,9 +102,9 @@ export default class App extends Component {
           <main>
             {children}
           </main>
-          <footer>
-            <Footer />
-          </footer>
+{/*           <footer> */}
+{/*             <Footer /> */}
+{/*           </footer> */}
         </Wrapper>
       </ThemeProvider>
     );
