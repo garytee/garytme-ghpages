@@ -19,31 +19,6 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, portfolioimages,
   <PortfolioDescription>
   <section dangerouslySetInnerHTML={{ __html: html }} />
 
-{/*             {websiteurl != null && */}
-{/*             */}
-{/*         <a */}
-{/*       href={websiteurl} */}
-{/*       target="_blank" */}
-{/*       rel="noreferrer noopener" */}
-{/*     >Go to Web Site →</a> */}
-{/*  */}
-{/*  } */}
-
-{/*     <AwesomeButton cssModule={AwesomeButtonStyles} type="primary"> */}
-{/*       Button */}
-{/*     </AwesomeButton> */}
-
-{/* {websiteurl != null && */}
-{/*     <AwesomeButton */}
-{/*       cssModule={AwesomeButtonStyles} */}
-{/*       size="large" */}
-{/*       type="primary" */}
-{/*       href={websiteurl} */}
-{/*       target="_blank" */}
-{/*     > */}
-{/*       Visit Website */}
-{/*     </AwesomeButton> */}
-{/* } */}
 <ButtonWrap>
 
 {websiteurl != null &&
@@ -62,15 +37,7 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, portfolioimages,
   </PortfolioDescription>
   <PortfolioImages>
   <span className="imgwrap">
-{/*   {attachments != null && attachments.map((attachment, i) => { */}
-{/*     return ( */}
-{/*       <Img */}
-{/*       key={i} */}
-{/*       fluid={attachment.childImageSharp.fluid} */}
-{/*       alt={title} */}
-{/*       /> */}
-{/*       ); */}
-{/*   })} */}
+
 
   {portfolioimages != null && portfolioimages.map((portfolioimage, i) => {
     return (

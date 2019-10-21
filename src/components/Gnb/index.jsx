@@ -131,7 +131,7 @@ const Gnb = ({
         <ul>
         <ListMenu>
         <StyledLink to="/">
-        <Img fixed={data.file.childImageSharp.fixed} />
+        <Img critical={true} fixed={data.file.childImageSharp.fixed} />
         </StyledLink>
         </ListMenu>
 {/*         <ListMenu> */}
@@ -194,7 +194,7 @@ const Gnb = ({
             <List>
             <ListMenu>
             <StyledLink to="/">
-            <Img fixed={data.file.childImageSharp.fixed} />
+            <Img critical={true} fixed={data.file.childImageSharp.fixed} />
             </StyledLink>
             </ListMenu>
 {/*             <ListMenu> */}
