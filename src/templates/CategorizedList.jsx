@@ -4,9 +4,7 @@ import Layout from '~/components/layout';
 import CategorizedList from '~/components/CategorizedList';
 
 const CategorizedListTemplate = props => (
-  <Layout {...props}>
     <CategorizedList {...props} />
-  </Layout>
 );
 
 export default CategorizedListTemplate;

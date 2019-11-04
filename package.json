@@ -35,6 +35,7 @@
     "core-js": "^2.6.5",
     "gatsby": "^2.8.5",
     "gatsby-image": "^2.2.6",
+    "gatsby-plugin-layout": "^1.1.13",
     "gatsby-plugin-mdx": "^1.0.17",
     "gatsby-plugin-ngrok-tunneling": "^1.1.5",
     "gatsby-plugin-remove-console": "0.0.2",

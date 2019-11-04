@@ -16,7 +16,12 @@ import { FaPrint, FaGithub, FaFacebook, FaTwitter, FaLinkedin } from 'react-icon
 import { PREFIX, AUTHOR, EMAIL, GITHUB_ID, TWITTER_ID, FACEBOOK_ID, LINKEDIN_ID } from '~/constants';
 
 const Image = posed.div({
-
+  enter: { y: 0, opacity: 1, delay: 300 },
+  exit: {
+    y: -50,
+    opacity: 0,
+    transition: { duration: 150 }
+  },
     open: {
     y: 0,
     opacity: 1,
