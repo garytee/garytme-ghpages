@@ -4,9 +4,7 @@ import Layout from '~/components/layout';
 import Post from '~/components/Post';
 
 const PostTemplate = props => (
-  <Layout {...props}>
     <Post {...props} />
-  </Layout>
 );
 
 export default PostTemplate;

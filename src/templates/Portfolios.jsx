@@ -4,9 +4,7 @@ import Layout from '~/components/layout';
 import Portfolios from '~/components/Portfolios';
 
 const PortfoliosTemplate = props => (
-  <Layout {...props}>
     <Portfolios {...props} />
-  </Layout>
 );
 
 export default PortfoliosTemplate;

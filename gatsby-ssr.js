@@ -4,9 +4,9 @@ import { ServerStyleSheet } from 'styled-components';
 import React from "react";
 import Transition from "./src/components/Transition";
 
-// export const wrapPageElement = ({ element, props }) => {
-//   return <Transition {...props}>{element}</Transition>;
-// };
+export const wrapPageElement = ({ element, props }) => {
+  return <Transition {...props}>{element}</Transition>;
+};
 
 export const replaceRenderer = ({
   bodyComponent,

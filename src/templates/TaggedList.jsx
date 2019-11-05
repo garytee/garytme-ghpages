@@ -4,9 +4,7 @@ import Layout from '~/components/layout';
 import TaggedList from '~/components/TaggedList';
 
 const TaggedListTemplate = props => (
-  <Layout {...props}>
     <TaggedList {...props} />
-  </Layout>
 );
 
 export default TaggedListTemplate;

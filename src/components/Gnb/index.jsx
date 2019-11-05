@@ -116,7 +116,7 @@ const Gnb = ({
           childImageSharp {
             # Specify the image processing specifications right in the query.
             # Makes it trivial to update as your page's design changes.
-            fixed(width:50) {
+            fixed(width:40) {
               ...GatsbyImageSharpFixed_withWebp_noBase64
             }
           }

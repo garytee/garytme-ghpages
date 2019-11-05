@@ -5,28 +5,35 @@ import Gnb from '~/components/Gnb';
 import Footer from '~/components/Footer';
 import { BLACK_COLOR, WHITE_COLOR } from '~/components/Common/constants';
 import { Wrapper } from './styled';
+import { Link } from "gatsby";
+
+const ListLink = props => (
+  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    <Link to={props.to}>{props.children}</Link>
+  </li>
+)
 
 export default class App extends Component {
 
 
-    componentDidMount() {
-    window.addEventListener("scroll", this.toggleBodyClass);
-    this.toggleBodyClass();
-  }
+  //   componentDidMount() {
+  //   window.addEventListener("scroll", this.toggleBodyClass);
+  //   this.toggleBodyClass();
+  // }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.toggleBodyClass);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll", this.toggleBodyClass);
+  // }
 
-  toggleBodyClass = () => {
-    if (window.scrollY > 100) {
-      // document.body.classList.add("showChildDiv");
-      document.getElementById("navigation").classList.add("scrolled");
-    } else {
-      // document.body.classList.remove("showChildDiv");
-      document.getElementById("navigation").classList.remove("scrolled");
-    }
-  };
+  // toggleBodyClass = () => {
+  //   if (window.scrollY > 100) {
+  //     // document.body.classList.add("showChildDiv");
+  //     document.getElementById("navigation").classList.add("scrolled");
+  //   } else {
+  //     // document.body.classList.remove("showChildDiv");
+  //     document.getElementById("navigation").classList.remove("scrolled");
+  //   }
+  // };
 
   render() {
     return (
@@ -42,9 +49,9 @@ export default class App extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,
-    categories: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-    postInformations: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-    hasPortfolio: PropTypes.bool.isRequired,
+    // categories: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+    // postInformations: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+    // hasPortfolio: PropTypes.bool.isRequired,
   }
 
   state = {
@@ -99,6 +106,20 @@ export default class App extends Component {
               isDracula={isDracula}
             />
           </nav>
+
+{/*     <header style={{ marginBottom: `1.5rem` }}> */}
+{/*       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}> */}
+{/*         <h3 style={{ display: `inline` }}>MySweetSite</h3> */}
+{/*         <img src="/logo/favicon.png" /> */}
+{/*       </Link> */}
+{/*       <ul style={{ listStyle: `none`, float: `right` }}> */}
+{/*         <ListLink to="/">Home</ListLink> */}
+{/*         <ListLink to="/portfolio/">portfolio</ListLink> */}
+{/*         <ListLink to="/resume/">resume</ListLink> */}
+{/*       </ul> */}
+{/*     </header> */}
+
+
           <main>
             {children}
           </main>

@@ -67,12 +67,17 @@ export const GnbWrapper = styled.div`
 
     ${hamburger}
   }
+
+  ul{
+    margin: 0;
+  }
 `;
 
 export const List = styled.ul`
   display: flex;
   align-items: center;
-  height: 80px;
+  height: 60px;
+  margin-bottom: 0 !important;
 
   @media (max-width: 414px) {
     display: none;

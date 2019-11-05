@@ -78,6 +78,12 @@ module.exports = {
         trackingId: 'UA-144572870-1',
       },
     },
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve(`./src/components/layout/index.jsx`),
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-ngrok-tunneling',

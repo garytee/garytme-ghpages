@@ -1,3 +1,47 @@
+*,
+*::before,
+*::after,
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*@import 'https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script';*/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: #252934;
+  background: #fafafa;
+  /*font-size: 62.5%;*/
+  /*font-family: 'Overlock', Arial, Helvetica, sans-serif;*/
+  overflow-x: hidden;
+}
+
+/*a,
+a:visited {
+  color: #252934;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: 200ms;
+}*/
+
+a:hover,
+a:active {
+  color: #f300b4;
+}
+
+
+
+
+
+
+
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
 em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
@@ -63,20 +107,12 @@ a, a:focus, a:hover, a:visited {
 img {
   user-select: none;
 }
-body {
+/*body {
   -webkit-font-smoothing: antialiased;
-}
+}*/
 button, a, label {
   cursor: pointer;
 }
 *[disabled] {
   cursor: not-allowed;
 }
-/*::-webkit-scrollbar {*/
-  /*width: 4px;*/
-  /*height: 6px;*/
-/*}*/
-/*::-webkit-scrollbar-thumb {*/
-  /*background-color: #3B9CFF;*/
-  /*border-radius: 6px;*/
-/*}*/
