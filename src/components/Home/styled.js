@@ -20,6 +20,51 @@ export const Title = styled.h1`
   white-space: nowrap;
 `;
 
+export const PortfolioCards = styled.ul`
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+margin-top: 40px;
+`;
+
+
+export const PortfolioCard = styled.li`
+// max-width: 400px;
+
+// max-width: 400px;
+
+// img{
+//   max-width: 200px;
+//   width: 100%;
+// }
+
+  width: calc(1/3*100% - (1 - 1/3)*60px);
+  // padding: 100px;
+  margin: 100px 0px;
+
+`;
+
+
+
+export const PortImage = styled.div`
+
+max-width: 200px;
+margin: 0 auto;
+
+`;
+
+
+export const Img = styled.img`
+// max-width: 200px;
+
+// img{
+//   max-width: 400px;
+//   width: 100%;
+// }
+
+`;
+
 
 
 

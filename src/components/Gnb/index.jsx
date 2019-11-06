@@ -1,4 +1,7 @@
 import React, { useReducer, useCallback, useEffect } from 'react';
+import useDarkMode from "use-dark-mode";
+// import Sunrise from "~/components/icons/sunrise"
+// import Sunset from "~/components/icons/sunset"
 import PropTypes from 'prop-types';
 import { Link, navigate, StaticQuery, graphql } from 'gatsby';
 import Toggle from 'react-toggle';
@@ -108,6 +111,17 @@ const Gnb = ({
   const isHome = pathname.replace(/\/$/, '') === '';
   const isResume = pathname.replace(/\/$/, '') === '/resume';
   const isPost = !(isPortfolio || isHome || isResume);
+
+
+
+    // Instantiate with the default behavior, in this case, it defaults to light-mode
+ // This places "light-mode" class on document.body, as outlined in my gatsby-config.js
+  const darkMode = useDarkMode(false);
+
+  // Custom function that handles the toggling
+  // When called, it replaces the class on document.body and holds it in localStorage
+  const handleTheme = theme => theme === "dark" ? darkMode.enable() : darkMode.disable();
+
   return (
     <StaticQuery
     query={graphql`
@@ -239,15 +253,41 @@ const Gnb = ({
 {/*         <Img fixed={data.file.childImageSharp.fixed} /> */}
 {/*         </StyledLink> */}
             <ToggleWrapper>
-            <Toggle
-            defaultChecked={isDracula}
-            icons={{
+{/*             <Toggle */}
+{/*             defaultChecked={isDracula} */}
+{/*             icons={{ */}
+{/*               checked: <span role="img" aria-label="change-theme">🌙</span>, */}
+{/*               unchecked: <span role="img" aria-label="change-theme">☀️</span>, */}
+{/*             }} */}
+{/*             onChange={toggleTheme} */}
+{/*             /> */}
+
+
+{/*       <button type="button" onClick={darkMode.disable}> */}
+{/*         ☀ */}
+{/*       </button> */}
+      <Toggle 
+                  icons={{
               checked: <span role="img" aria-label="change-theme">🌙</span>,
               unchecked: <span role="img" aria-label="change-theme">☀️</span>,
             }}
-            onChange={toggleTheme}
-            />
+      checked={darkMode.value} onChange={darkMode.toggle} />
+{/*       <button type="button" onClick={darkMode.enable}> */}
+{/*         ☾ */}
+{/*       </button> */}
+
+{/*     <div className="toggle"> */}
+{/*       <Sunrise onClick={handleTheme} /> / */}
+{/*       <Sunset onClick={handleTheme} /> */}
+{/*     </div> */}
             </ToggleWrapper>
+
+{/*                 <div className="hero"> */}
+{/*       <Sunrise onClick={handleTheme} /> */}
+{/*       <Sunset onClick={handleTheme} /> */}
+{/*     </div> */}
+
+
             </GnbWrapper>
             )}
             />

@@ -4,9 +4,10 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import Wrapper from '~/components/Common/Wrapper';
 import { TITLE } from '~/constants';
-import { Title, Intro, Welcome } from './styled';
+import { Title, Intro, Welcome, PortfolioCards, PortfolioCard, PortImage } from './styled';
 import SimpleWrapper from '~/components/Common/SimpleWrapper';
-import PortfolioCard from '~/components/Common/PortfolioCard';
+// import PortfolioCard from '~/components/Common/PortfolioCard';
+import ImgWithOrient from '~/components/imageOrient';
 import posed from 'react-pose';
 import Img from 'gatsby-image';
 import * as profileUrl from '~/resources/profilepic.png';
@@ -16,6 +17,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { FaPrint, FaGithub, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { PREFIX, AUTHOR, EMAIL, GITHUB_ID, TWITTER_ID, FACEBOOK_ID, LINKEDIN_ID } from '~/constants';
+
+
+
+// const PortfolioCards = posed.ul({
+//   // open: {
+//   //   x: '0%',
+//   //   delayChildren: 300,
+//   //   staggerChildren: 100
+//   // },
+//   // // closed: { x: '-100%', delay: 300 }
+// });
+
+// const PortfolioCard = posed.li({
+//   // open: { y: 0, opacity: 1 },
+//   // closed: { y: 20, opacity: 0 }
+// });
+
 
 const Image = posed.div({
 
@@ -233,6 +251,8 @@ const Home = ({ portfolios }) => (
               <FaLinkedin />
             </a>
           ) : null}
+
+
 </Item>
     </List>
 
@@ -316,43 +336,101 @@ const Home = ({ portfolios }) => (
           
 
 
+{/*  */}
+{/*                   {portfolios.length >= 4 ? ( */}
+{/*       <SimpleWrapper> */}
+{/*         {portfolios */}
+{/*           .slice(0, 8) */}
+{/*           .map(({ node: { frontmatter: { path, title, images } } }) => { */}
+{/*             const image = Array.isArray(images) ? images[0] : null; */}
+{/*  */}
+{/*             if (image !== null) { */}
+{/*               return ( */}
+{/*                 <PortfolioCard key={path}> */}
+{/*                   <Link to={path}> */}
+{/*                     {image.includes('//') ? ( */}
+{/*                       <img src={image} alt="portfolio" /> */}
+{/*                     ) : ( */}
+{/*                       <img src={require(`~/resources/${image}`)} alt="portfolio" /> */}
+{/*                     )} */}
+{/*                     <h6> */}
+{/*                       {title} */}
+{/*                     </h6> */}
+{/*                   </Link> */}
+{/*                 </PortfolioCard> */}
+{/*               ); */}
+{/*             } */}
+{/*  */}
+{/*             return ( */}
+{/*               <PortfolioCard key={path}> */}
+{/*                 <Link to={path}> */}
+{/*                   <h4> */}
+{/*                     {title} */}
+{/*                   </h4> */}
+{/*                 </Link> */}
+{/*               </PortfolioCard> */}
+{/*             ); */}
+{/*           })} */}
+{/*       </SimpleWrapper> */}
+{/*     ) : null} */}
+{/*  */}
 
-                  {portfolios.length >= 4 ? (
-      <SimpleWrapper>
-        {portfolios
-          .slice(0, 8)
-          .map(({ node: { frontmatter: { path, title, images } } }) => {
-            const image = Array.isArray(images) ? images[0] : null;
 
-            if (image !== null) {
-              return (
-                <PortfolioCard key={path}>
-                  <Link to={path}>
-                    {image.includes('//') ? (
-                      <img src={image} alt="portfolio" />
-                    ) : (
-                      <img src={require(`~/resources/${image}`)} alt="portfolio" />
-                    )}
-                    <h6>
-                      {title}
-                    </h6>
-                  </Link>
-                </PortfolioCard>
-              );
-            }
 
-            return (
-              <PortfolioCard key={path}>
-                <Link to={path}>
-                  <h4>
-                    {title}
-                  </h4>
-                </Link>
-              </PortfolioCard>
-            );
-          })}
-      </SimpleWrapper>
-    ) : null}
+ <PortfolioCards className="portfolio_cards">
+    {portfolios.map(({ node: { frontmatter: { portfoliosimages, path, title = [] } } }) => {
+        return (
+          <PortfolioCard className="portfolio_card" key={path}>
+            <Link to={path}>
+
+
+
+
+      {portfoliosimages != null && portfoliosimages.map((portfoliosimage, i) => {
+
+
+{/* <Img sizes={{...portfoliosimage.childImageSharp.fixed, aspectRatio: 1}}/> */}
+
+
+        return (
+
+
+<PortImage key={path}>
+  <ImgWithOrient
+    key={path}
+    aspectRatio={portfoliosimage.childImageSharp.fluid.aspectRatio}
+    alt={portfoliosimage.name}
+    fluid={portfoliosimage.childImageSharp.fluid}
+  />
+
+  </PortImage>
+
+        );
+      })}
+
+
+
+            </Link>
+
+
+
+
+          </PortfolioCard>
+        );
+
+{/*       return ( */}
+{/*         <PortfolioCard key={path}> */}
+{/*           <Link to={path}> */}
+{/*             <h4> */}
+{/*               {title} */}
+{/*             </h4> */}
+{/*           </Link> */}
+{/*         </PortfolioCard> */}
+{/*       ); */}
+
+
+    })}
+    </PortfolioCards>
 
 
         </div>
@@ -380,7 +458,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </p>
           </div>
         </div>
-        <form id="contact-form" action="#">
+{/*         <form id="contact-form" method="post" action="#"> */}
+<form id="contact-form" name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
+   <input type="hidden" name="bot-field" />
           <input placeholder="Name" name="name" type="text" required />
           <input placeholder="Email" name="email" type="email" required />
           <textarea placeholder="Message" type="text" name="message" />

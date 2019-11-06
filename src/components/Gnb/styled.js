@@ -71,6 +71,14 @@ export const GnbWrapper = styled.div`
   ul{
     margin: 0;
   }
+
+     .hero {
+      background: @sunrise-gradient;
+      .dark-mode & {
+        background: @sunset-gradient;
+      }
+    }
+
 `;
 
 export const List = styled.ul`
@@ -370,7 +378,7 @@ export const MobileMenu = styled.section`
 
 export const ToggleWrapper = styled.label`
   position: absolute;
-  top: 28px;
+  top: 18px;
   right: 30px;
   z-index: 3;
 

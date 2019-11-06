@@ -17,6 +17,7 @@ const Layout = ({ children, location }) => (
       query GatsbyQuery {
         posts: allMarkdownRemark(
           filter: { frontmatter: { hide: { ne: true } } }
+          sort: { fields: [frontmatter___date], order: DESC }
         ){
           edges {
             node {
@@ -28,6 +29,17 @@ const Layout = ({ children, location }) => (
                 summary
                 tags
                 images
+                portfoliosimages {
+            childImageSharp {
+                fluid(maxWidth: 200, quality: 72) {
+                    aspectRatio
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+            }
+            publicURL
+        }
+        date
+
               }
             }
           }
