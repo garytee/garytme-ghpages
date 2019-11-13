@@ -66,8 +66,8 @@ const reducer = (state = initialState, action) => {
 };
 const Gnb = ({
   location,
-  toggleTheme,
-  isDracula,
+  toggleDark,
+  dark,
   categories,
   postInformations,
   hasPortfolio,
@@ -271,7 +271,7 @@ const Gnb = ({
               checked: <span role="img" aria-label="change-theme">🌙</span>,
               unchecked: <span role="img" aria-label="change-theme">☀️</span>,
             }}
-      checked={darkMode.value} onChange={darkMode.toggle} />
+      checked={darkMode.value} onChange={darkMode.toggle} onClick={toggleDark}/>
 {/*       <button type="button" onClick={darkMode.enable}> */}
 {/*         ☾ */}
 {/*       </button> */}
@@ -295,8 +295,8 @@ const Gnb = ({
         };
         Gnb.propTypes = {
           location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,
-          toggleTheme: PropTypes.func.isRequired,
-          isDracula: PropTypes.bool.isRequired,
+          toggleDark: PropTypes.func.isRequired,
+          dark: PropTypes.bool.isRequired,
           categories: PropTypes.arrayOf(PropTypes.shape({})),
           postInformations: PropTypes.arrayOf(PropTypes.shape({})),
           hasPortfolio: PropTypes.bool.isRequired,

@@ -13,6 +13,20 @@ const ListLink = props => (
   </li>
 )
 
+
+const defaultState = {
+  dark: false,
+  toggleDark: () => {},
+}
+
+const ThemeContext = React.createContext(defaultState)
+
+// Getting dark mode information from OS!
+// You need macOS Mojave + Safari Technology Preview Release 68 to test this currently.
+const supportsDarkMode = () =>
+  window.matchMedia('(prefers-color-scheme: dark)').matches === true
+
+
 export default class App extends Component {
 
 
@@ -54,27 +68,48 @@ export default class App extends Component {
     // hasPortfolio: PropTypes.bool.isRequired,
   }
 
-  state = {
-    isDracula: global.localStorage && global.localStorage.getItem('theme') === 'dracula',
+  // state = {
+  //   isDracula: global.localStorage && global.localStorage.getItem('theme') === 'dracula',
+  // }
+
+  // toggleTheme = () => {
+  //   const { isDracula } = this.state;
+
+  //   if (isDracula) {
+  //     if (global.localStorage) {
+  //       global.localStorage.setItem('theme', 'normal');
+  //     }
+  //   } else {
+  //     if (global.localStorage) {
+  //       global.localStorage.setItem('theme', 'dracula');
+  //     }
+  //   }
+
+  //   this.setState({
+  //     isDracula: !isDracula,
+  //   });
+  // };
+
+
+state = {
+    dark: false,
   }
 
-  toggleTheme = () => {
-    const { isDracula } = this.state;
+  toggleDark = () => {
+    let dark = !this.state.dark
+    localStorage.setItem('dark', JSON.stringify(dark))
+    this.setState({ dark })
+  }
 
-    if (isDracula) {
-      if (global.localStorage) {
-        global.localStorage.setItem('theme', 'normal');
-      }
-    } else {
-      if (global.localStorage) {
-        global.localStorage.setItem('theme', 'dracula');
-      }
+  componentDidMount() {
+    // Getting dark mode value from localStorage!
+    const lsDark = JSON.parse(localStorage.getItem('dark'))
+    if (lsDark) {
+      this.setState({ dark: lsDark })
+    } else if (supportsDarkMode()) {
+      this.setState({ dark: true })
     }
-
-    this.setState({
-      isDracula: !isDracula,
-    });
-  };
+  }
 
   render() {
     const {
@@ -84,8 +119,8 @@ export default class App extends Component {
       hasPortfolio,
       children,
     } = this.props;
-    const { isDracula } = this.state;
-    const theme = isDracula ? {
+    const { dark } = this.state;
+    const theme = dark ? {
       color: WHITE_COLOR,
       backgroundColor: BLACK_COLOR,
     } : {
@@ -102,8 +137,8 @@ export default class App extends Component {
               categories={categories}
               postInformations={postInformations}
               hasPortfolio={hasPortfolio}
-              toggleTheme={this.toggleTheme}
-              isDracula={isDracula}
+              toggleDark={this.toggleDark}
+              dark={dark}
             />
           </nav>
 
