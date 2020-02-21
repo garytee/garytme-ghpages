@@ -18,27 +18,20 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, portfolioimages,
   </Helmet>
   <PortfolioDescription>
   <section dangerouslySetInnerHTML={{ __html: html }} />
-
-<ButtonWrap>
-
-{websiteurl != null &&
-<AwesomeButton
- type="primary"
- size="large"
- href={websiteurl}
- target="_blank"
->Visit Website&nbsp;<FontAwesomeIcon icon={["fal", "arrow-right"]} style={{color:"#2464A7"}}/>
-</AwesomeButton>
-}
-
-
-</ButtonWrap>
-
+  <ButtonWrap>
+  {websiteurl != null &&
+    <AwesomeButton
+    type="primary"
+    size="large"
+    href={websiteurl}
+    target="_blank"
+    >Visit Website&nbsp;<FontAwesomeIcon icon={["fal", "arrow-right"]} style={{color:"#2464A7"}}/>
+    </AwesomeButton>
+  }
+  </ButtonWrap>
   </PortfolioDescription>
   <PortfolioImages>
   <span className="imgwrap">
-
-
   {portfolioimages != null && portfolioimages.map((portfolioimage, i) => {
     return (
       <Img
@@ -48,7 +41,6 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, portfolioimages,
       />
       );
   })}
-
   </span>
   </PortfolioImages>
   </Wrapper>

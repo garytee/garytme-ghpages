@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import Gnb from '~/components/Gnb';
 import Footer from '~/components/Footer';
-import { BLACK_COLOR, WHITE_COLOR } from '~/components/Common/constants';
+import { BLACK_COLOR, WHITE_COLOR, homeherolight, homeherodark, homeabout } from '~/components/Common/constants';
 import { Wrapper } from './styled';
 import { Link } from "gatsby";
 
@@ -123,9 +123,13 @@ state = {
     const theme = dark ? {
       color: WHITE_COLOR,
       backgroundColor: BLACK_COLOR,
+      homeherobackground: homeherodark,
+      homeabout: homeabout,
     } : {
       color: BLACK_COLOR,
       backgroundColor: WHITE_COLOR,
+      homeherobackground: homeherolight,
+      homeabout: WHITE_COLOR,
     };
 
     return (

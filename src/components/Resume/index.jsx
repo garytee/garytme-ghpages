@@ -6,113 +6,65 @@ import Clearfix from '~/components/Common/Clearfix';
 import { PREFIX, AUTHOR, EMAIL, GITHUB_ID, TWITTER_ID, FACEBOOK_ID, LINKEDIN_ID } from '~/constants';
 import * as profileUrl from '~/resources/profilepic.png';
 import { Wrapper, BasicInformation, SocialInformation, MDInformation, Button } from './styled';
-
-const Resume = ({
-  data: {
-    resume: {
-      html,
-    },
+import IconLocation from "~/components/icons/location"
+import { Link } from 'gatsby';
+import Img from 'gatsby-image'
+import posed from 'react-pose';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+const PortfolioCards = posed.ul({
+  open: {
+    x: '0%',
+    delayChildren: 300,
+    staggerChildren: 100
   },
-}) => {
-  const $mdWrapper = useRef(null);
-
-  useEffect(() => {
-    const anchors = [...new Set($mdWrapper.current.getElementsByTagName('a'))];
-
-    anchors.forEach((anchor) => {
-      const href = anchor.getAttribute('href');
-
-      if (href.startsWith('http')) {
-        anchor.setAttribute('target', '_blank');
-        anchor.setAttribute('rel', 'noreferrer noopener');
-      }
-    });
-  }, []);
-
-  const printPage = useCallback(() => {
-    global.print();
-  }, []);
-
-  return (
-    <Wrapper>
-      <Clearfix>
-        <Helmet>
-          <title>
-            {`${PREFIX}RESUME`}
-          </title>
-          <meta name="og:title" content={`${PREFIX}RESUME`} />
-        </Helmet>
-        <Clearfix>
-          <Button type="button" onClick={printPage}>
-            <FaPrint />
-            Print
-          </Button>
-        </Clearfix>
-        <BasicInformation>
-          <img
-            src={profileUrl.default}
-            alt=""
-            width="120"
-            height="120"
-          />
-          <h1>
-            {AUTHOR}
-          </h1>
-          <p>
-            {EMAIL}
-          </p>
-        </BasicInformation>
-        <SocialInformation>
-          {GITHUB_ID ? (
-            <a
-              href={`https://github.com/${GITHUB_ID}`}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaGithub />
-            </a>
-          ) : null}
-          {TWITTER_ID ? (
-            <a
-              href={`https://twitter.com/${TWITTER_ID}`}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaTwitter />
-            </a>
-          ) : null}
-          {FACEBOOK_ID ? (
-            <a
-              href={`https://www.facebook.com/${FACEBOOK_ID}`}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaFacebook />
-            </a>
-          ) : null}
-          {LINKEDIN_ID ? (
-            <a
-              href={`https://www.linkedin.com/in/${LINKEDIN_ID}/`}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaLinkedin />
-            </a>
-          ) : null}
-        </SocialInformation>
-        <MDInformation>
-          <div
-            ref={$mdWrapper}
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </MDInformation>
-      </Clearfix>
-    </Wrapper>
+});
+const PortfolioCard = posed.li({
+  open: { y: 0, opacity: 1 },
+  closed: { y: 20, opacity: 0 }
+});
+const Resume = ({ data: { resume: { edges: resume } } }) => (
+  <Wrapper>
+  <Helmet>
+  <title>
+  {`${PREFIX}RESUME`}
+  </title>
+  <meta name="og:title" content={`${PREFIX}RESUME`} />
+  </Helmet>
+  <PortfolioCards initialPose="closed" pose="open" className="portfolio_cards">
+  {resume.map(({ node: { title ,company ,link ,current ,education ,location ,duration , bullets = [] } }, i) => {
+    return (
+      <div
+      key={i}
+      className={`page--resume__job${current ? " -is-current" : ""}${
+        education ? " -is-education" : ""
+      }`}
+      >
+      <h2>
+      <strong>{title}</strong> at <a target="_blank" href={link}>{company}</a>
+      </h2>
+      <div className="page--resume__wrap">
+      <div className="page--resume__details">
+      <h3>{duration}</h3>
+      <div className="page--resume__location">
+      {current && <IconLocation fill="#FF6262" />}
+      {location}
+      </div>
+      </div>
+      <div className="page--resume__bullets">
+      <ul>
+      {bullets.map((bullet, i) => (
+        <li key={i}>{bullet}</li>
+        ))}
+      </ul>
+      </div>
+      </div>
+      </div>
+      );
+  })}
+  </PortfolioCards>
+  </Wrapper>
   );
-};
-
 Resume.propTypes = {
   data: PropTypes.shape({ date: PropTypes.object }).isRequired,
 };
-
 export default Resume;

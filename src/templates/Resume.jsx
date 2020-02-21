@@ -4,13 +4,15 @@ import Layout from '~/components/layout';
 import Resume from '~/components/Resume';
 
 const ResumeTemplate = props => (
+  <Layout {...props}>
     <Resume {...props} />
+  </Layout>
 );
 
 export default ResumeTemplate;
 
 export const pageQuery = graphql`
-  query ResumeQuery ($path: String!) {
+  query ResumeQuery {
     site {
       siteMetadata {
         title
@@ -18,15 +20,22 @@ export const pageQuery = graphql`
         homepage
       }
     }
-    resume: markdownRemark (
-      frontmatter: { path: { eq: $path } }
-    ) {
-      id
-      html
-      frontmatter {
-        title
-        date
-      }
-    }
+    resume:
+    allJobsJson {
+          edges {
+            node {
+              title
+              company
+              link
+              current
+              education
+              location
+              duration
+              bullets
+            }
+          }
+        }
   }
 `;
+
+

@@ -1,5 +1,6 @@
 ---
-hide: true
+hide: false
+type: "featured"
 path: "/posts/rpi-homebridge/"
 category: "Raspberry-Pi"
 tags: ["tag"]

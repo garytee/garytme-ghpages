@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const WrapperOuter = styled.section`
   position: relative;
-  padding: 56.25% 0 0;
+  // padding: 56.25% 0 0;
   width: 100%;
   height: 0;
   @media (max-width: 414px) {

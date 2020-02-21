@@ -1,13 +1,16 @@
 import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import { POST, PORTFOLIO } from '~/constants';
+import { POST, PORTFOLIO, FEATURED } from '~/constants';
 import App from '~/components/App';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fal } from '@fortawesome/pro-light-svg-icons';
 import { faCheckSquare, faCoffee, fas  } from '@fortawesome/pro-solid-svg-icons';
+
+import getPosts from '~/utils/getPosts';
+
 
 library.add(fab, fas, fal, faCheckSquare, faCoffee)
 
@@ -38,6 +41,15 @@ const Layout = ({ children, location }) => (
             }
             publicURL
         }
+                heroimages {
+            childImageSharp {
+                fluid(maxWidth: 200, quality: 72) {
+                    aspectRatio
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+            }
+            publicURL
+        }
         date
 
               }
@@ -48,6 +60,7 @@ const Layout = ({ children, location }) => (
     `}
     render={({ posts }) => {
       const { edges } = posts;
+      const allposts = edges.filter(({ node: { frontmatter: { type } } }) => type === FEATURED);
       const portfolios = edges.filter(({ node: { frontmatter: { type } } }) => type === PORTFOLIO);
       const categories = edges.reduce((categories, { node }) => {
         const { category } = node.frontmatter;
@@ -95,7 +108,7 @@ const Layout = ({ children, location }) => (
 
       const hasPortfolio = portfolios.length > 0;
 
-      const childrenWithProps = Children.map(children, child => cloneElement(child, { portfolios }));
+      const childrenWithProps = Children.map(children, child => cloneElement(child, { portfolios, allposts }));
 
       return (
         <App

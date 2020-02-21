@@ -144,7 +144,9 @@ const Gnb = ({
         <MobileMenus>
         <ul>
         <ListMenu>
-        <StyledLink to="/">
+{/*         <StyledLink to="/"> */}
+              <StyledLink to="/" className={isHome ? 'active' : ''} onClick={toggleMenu}>
+
         <Img critical={true} fixed={data.file.childImageSharp.fixed} />
         </StyledLink>
         </ListMenu>

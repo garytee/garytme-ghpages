@@ -53,6 +53,8 @@ export const GnbWrapper = styled.div`
   font-weight: 600;
   z-index: 3000;
   background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
+        transition: all 0.6s ease;
+
 
 &.scrolled{
       transition: all .5s ease;
