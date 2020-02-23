@@ -4,9 +4,7 @@ import Layout from '~/components/layout';
 import Resume from '~/components/Resume';
 
 const ResumeTemplate = props => (
-  <Layout {...props}>
     <Resume {...props} />
-  </Layout>
 );
 
 export default ResumeTemplate;
