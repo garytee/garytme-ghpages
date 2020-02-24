@@ -6,7 +6,7 @@ import Clearfix from '~/components/Common/Clearfix';
 import { PREFIX, AUTHOR, EMAIL, GITHUB_ID, TWITTER_ID, FACEBOOK_ID, LINKEDIN_ID } from '~/constants';
 import * as profileUrl from '~/resources/profilepic.png';
 import { Wrapper, BasicInformation, SocialInformation, MDInformation, Button } from './styled';
-import IconLocation from "~/components/icons/location"
+import IconLocation from "~/components/Icons/location"
 import { Link } from 'gatsby';
 import Img from 'gatsby-image'
 import posed from 'react-pose';

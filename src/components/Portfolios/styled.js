@@ -27,3 +27,24 @@ ul li{
   }
 }
 `;
+
+export const PortfolioCards = styled.ul`
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+// margin-top: 40px;
+`;
+export const PortfolioCard = styled.li`
+@media (min-width: 414px) {
+  width: calc(1/3*100% - (1 - 1/3)*60px);
+  margin: 100px 0px;
+}
+width: calc(1/2*100% - (1 - 1/2)*60px);
+margin: 100px 0px;
+`;
+
+export const PortImage = styled.div`
+max-width: 200px;
+margin: 0 auto;
+`;

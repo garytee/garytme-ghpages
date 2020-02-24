@@ -42,7 +42,7 @@ background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 }
 @media screen and (max-width: 450px) {
   .page--resume__job {
-    margin: 40px 0;
+    // margin: 40px 0;
     padding-bottom: 10px;
   }
 }
@@ -145,11 +145,11 @@ background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 .page--resume__job.-is-education {
   margin-top: 100px;
 }
-@media screen and (max-width: 450px) {
-  .page--resume__job.-is-education {
-    margin-top: 0;
-  }
-}
+// @media screen and (max-width: 450px) {
+//   .page--resume__job.-is-education {
+//     margin-top: 0;
+//   }
+// }
 .page--resume__job.-is-education::before {
   content: 'Education';
   white-space: nowrap;

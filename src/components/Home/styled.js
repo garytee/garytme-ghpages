@@ -481,7 +481,7 @@ export const Welcome = styled.div`
 }
 @media only screen and (max-width: 649px) {
   #projects {
-    background: #f0f0f0;
+    // background: #f0f0f0;
   }
   #projects .projects-container {
     padding: 12rem 0 8rem;
@@ -530,7 +530,7 @@ export const Welcome = styled.div`
 input, textarea {
   border: none;
   padding: 1rem;
-  font-family: 'Overlock', Arial, Helvetica, sans-serif;
+  // font-family: 'Overlock', Arial, Helvetica, sans-serif;
   width: 100%;
   height: 40%;
   transition: 200ms;

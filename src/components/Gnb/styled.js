@@ -400,7 +400,7 @@ export const ToggleWrapper = styled.label`
     background-color: transparent;
     border: 0;
     padding: 0;
-
+    // top: 5px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -410,6 +410,11 @@ export const ToggleWrapper = styled.label`
 
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
+
+    @media (max-width: 414px) {
+    top: 5px;
+  }
+
   }
 
   .react-toggle-screenreader-only {

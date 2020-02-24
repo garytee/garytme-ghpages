@@ -5,6 +5,12 @@ const SimpleWrapper = styled.div`
   margin: 0 auto;
   max-width: 1920px;
 
+  //dark mode
+
+min-height: 100vh;
+
+  //dark mode
+
   &:before,
   &:after {
     display: block;

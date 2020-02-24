@@ -94,7 +94,7 @@ const PostWrapper = styled.section`
     padding: 1.58333rem;
     white-space: inherit;
     word-wrap: normal;
-    font-family: Inconsolata, monospace;
+    // font-family: Inconsolata, monospace;
   }
 
   .gatsby-highlight code {
@@ -111,7 +111,7 @@ const PostWrapper = styled.section`
     background: transparent;
     color: #3B9CFF;
     display: inline;
-    font-family: D2Coding, 'D2 coding', monospace, serif;
+    // font-family: D2Coding, 'D2 coding', monospace, serif;
     max-width: 100%;
     overflow: auto;
     padding: 0 0.1625rem;
