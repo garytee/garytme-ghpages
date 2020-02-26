@@ -24,12 +24,24 @@ justify-content: space-between;
 margin-top: 40px;
 `;
 export const PortfolioCard = styled.li`
-@media (min-width: 414px) {
-  width: calc(1/3*100% - (1 - 1/3)*60px);
-  margin: 100px 0px;
-}
-width: calc(1/2*100% - (1 - 1/2)*60px);
+// @media (min-width: 414px) {
+//   width: calc(1/3*100% - (1 - 1/3)*60px);
+//   margin: 100px 0px;
+// }
+   width: calc(1/3*100% - (1 - 1/3)*60px);
 margin: 100px 0px;
+
+ @media (max-width: 768px) {
+   width: calc(1/2*100% - (1 - 1/2)*60px);
+   margin: 100px 0px;
+ }
+
+ @media (max-width: 414px) {
+   // width: calc(1/2*100% - (1 - 1/2)*60px);
+   width: 100%;
+   margin: 100px 0px;
+ }
+
 `;
 export const PortImage = styled.div`
 max-width: 200px;
