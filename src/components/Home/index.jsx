@@ -136,7 +136,7 @@ const Home = ({ portfolios, allposts }) => (
       <p className="separator" />
       </div>
       <div className="desc full">
-      <h4 className="subtitle">My name is Gary.</h4>
+{/*       <h4 className="subtitle">My name is Gary.</h4> */}
       <p>
       I am a web developer & business owner based in the Queens, NY.
       </p>
