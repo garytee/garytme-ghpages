@@ -6,6 +6,7 @@ position: relative;
 top: 100px;
 color: ${({ theme: { color } }) => color};
 background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
+transition: all 0.6s ease;
 .page--resume {
   color: black;
 }
@@ -58,7 +59,10 @@ background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 .page--resume__job h2 {
   font-size: 19px;
   font-weight: 300;
-  color: black;
+  // color: black;
+color: ${({ theme: { color } }) => color};
+transition: all 0.6s ease;
+
 }
 .page--resume__job h2 strong {
   font-weight: 700;

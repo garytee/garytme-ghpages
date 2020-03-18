@@ -51,7 +51,7 @@ const Home = ({ portfolios, allposts }) => (
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 125, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }

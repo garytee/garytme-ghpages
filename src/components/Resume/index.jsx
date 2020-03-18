@@ -46,7 +46,7 @@ const Resume = ({ data: { resume: { edges: resume } } }) => (
       <div className="page--resume__details">
       <h3>{duration}</h3>
       <div className="page--resume__location">
-      {current && <IconLocation fill="#FF6262" />}
+{/*       {current && <IconLocation fill="#FF6262" />} */}
       {location}
       </div>
       </div>
