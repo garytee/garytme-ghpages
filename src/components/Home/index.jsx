@@ -154,9 +154,9 @@ const Home = ({ portfolios, allposts }) => (
       <p>
       Being a programmer has given me the tools to make great websites for my clients as well as streamline many aspects of my personal life. I have a solid understanding of both the front & back end of projects I undertake. Many of my clients are small businesses, and for these projects I mainly code in PHP & Javascript because Wordpress is well understood and makes it much easier for my clients to update their own web pages.
       </p>
-      <p>
-      For my personal projects, I use whatever is best suited for the job. For projects that require a Raspberry Pi or if I'm making changes to my self driving car, I code in Python. If a project requires an Arduino, I'm using C/C++. 
-      </p>
+{/*       <p> */}
+{/*       For my personal projects, I use whatever is best suited for the job. For projects that require a Raspberry Pi or if I'm making changes to my self driving car, I code in Python. If a project requires an Arduino, I'm using C/C++.  */}
+{/*       </p> */}
       </div>
       <div className="desc">
       <h4 className="subtitle">Also a project manager.</h4>
