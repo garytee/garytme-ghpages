@@ -19,9 +19,9 @@ const List = ({ data, location }) => {
       <PostsWrapper>
         <Helmet>
           <title>
-            {`${PREFIX}POST`}
+            {`${PREFIX}POSTS`}
           </title>
-          <meta name="og:title" content={`${PREFIX}POST`} />
+          <meta name="og:title" content={`${PREFIX}POSTS`} />
         </Helmet>
         {posts.map(({ node: { frontmatter: { images, tags, path, ...otherProps } } }) => (
           <Card key={path} path={path} images={images} tags={tags} {...otherProps} />

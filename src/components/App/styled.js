@@ -7,6 +7,15 @@ export const Wrapper = styled.div`
   transition: all 0.6s ease;
 
 
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    main{
+    	flex-grow: 1;
+    }
+
 // main{
 //    min-height: 100vh; /* will cover the 100% of viewport */
 //  overflow: hidden;

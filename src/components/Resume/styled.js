@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import Clearfix from '~/components/Common/Clearfix';
 export const Wrapper = styled.section`
 min-height: 100vh;
-position: relative;
-top: 100px;
+// position: relative;
+// top: 100px;
+
+padding-top: 140px;
 color: ${({ theme: { color } }) => color};
 background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
 transition: all 0.6s ease;
@@ -39,7 +41,7 @@ transition: all 0.6s ease;
   padding: 55px 0 25px 70px;
   position: relative;
   padding-bottom: 55px;
-  border-bottom: 1px solid rgba(151, 153, 164, 0.25);
+  // border-bottom: 1px solid rgba(151, 153, 164, 0.25);
 }
 @media screen and (max-width: 450px) {
   .page--resume__job {
@@ -67,16 +69,16 @@ transition: all 0.6s ease;
 .page--resume__job h2 strong {
   font-weight: 700;
 }
-.page--resume__job h2 a,
-.page--resume__job h2 a:visited,
-.page--resume__job h2 a:active {
-  text-decoration: none;
-  color: black;
-  transition: all 0.1s ease-in-out;
-}
-.page--resume__job h2 a:hover {
-  color: #61AFEF;
-}
+// .page--resume__job h2 a,
+// .page--resume__job h2 a:visited,
+// .page--resume__job h2 a:active {
+//   text-decoration: none;
+//   color: black;
+//   transition: all 0.1s ease-in-out;
+// }
+// .page--resume__job h2 a:hover {
+//   color: #61AFEF;
+// }
 @media screen and (max-width: 450px) {
   .page--resume__job h2 {
     font-size: 17px;
@@ -102,10 +104,14 @@ transition: all 0.6s ease;
   font-size: 94px;
   font-weight: 900;
   z-index: -1;
-  color: rgba(255, 167, 129, 0.2);
+  // color: rgba(255, 167, 129, 0.2);
+  // color: ${({ theme: { color } }) => color};
+
+  color: ${({ theme: { bluecolor } }) => bluecolor};
 }
 .dark-mode .page--resume__job.-is-current::before {
-  color: rgba(105, 138, 252, 0.12);
+  // color: rgba(105, 138, 252, 0.12);
+
 }
 @media screen and (max-width: 800px) {
   .page--resume__job.-is-current::before {
@@ -128,7 +134,9 @@ transition: all 0.6s ease;
   font-size: 94px;
   font-weight: 900;
   z-index: -1;
-  color: rgba(255, 167, 129, 0.2);
+  // color: rgba(255, 167, 129, 0.2);
+    color: ${({ theme: { bluecolor } }) => bluecolor};
+
 }
 .dark-mode .page--resume__job:nth-of-type(2)::before {
   color: rgba(105, 138, 252, 0.12);
@@ -162,7 +170,9 @@ transition: all 0.6s ease;
   font-size: 94px;
   font-weight: 900;
   z-index: -1;
-  color: rgba(255, 167, 129, 0.2);
+  // color: rgba(255, 167, 129, 0.2);
+    color: ${({ theme: { bluecolor } }) => bluecolor};
+
 }
 .dark-mode .page--resume__job.-is-education::before {
   color: rgba(105, 138, 252, 0.12);
@@ -242,4 +252,10 @@ export const SocialInformation = styled.section`
 export const MDInformation = styled.section`
 `;
 export const Button = styled.button`
+`;
+
+export const ResumePage = styled.section`
+
+max-width: 800px;
+margin: 0 auto;
 `;

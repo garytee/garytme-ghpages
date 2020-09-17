@@ -33,7 +33,6 @@ display: flex;
 flex-wrap: wrap;
 align-items: center;
 justify-content: space-between;
-// margin-top: 40px;
 `;
 export const PortfolioCard = styled.li`
 @media (min-width: 414px) {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import Gnb from '~/components/Gnb';
 import Footer from '~/components/Footer';
-import { BLACK_COLOR, WHITE_COLOR, homeherolight, homeherodark, homeabout } from '~/components/Common/constants';
+import { BLACK_COLOR, WHITE_COLOR, homeherolight, homeherodark, homeabout, lightblue, darkblue } from '~/components/Common/constants';
 import { Wrapper } from './styled';
 import { Link } from "gatsby";
 
@@ -121,11 +121,13 @@ state = {
     } = this.props;
     const { dark } = this.state;
     const theme = dark ? {
+      bluecolor: lightblue,
       color: WHITE_COLOR,
       backgroundColor: BLACK_COLOR,
       homeherobackground: homeherodark,
       homeabout: homeabout,
     } : {
+      bluecolor: darkblue,
       color: BLACK_COLOR,
       backgroundColor: WHITE_COLOR,
       homeherobackground: homeherolight,
@@ -162,9 +164,9 @@ state = {
           <main>
             {children}
           </main>
-{/*           <footer> */}
-{/*             <Footer /> */}
-{/*           </footer> */}
+          <footer>
+            <Footer />
+          </footer>
         </Wrapper>
       </ThemeProvider>
     );

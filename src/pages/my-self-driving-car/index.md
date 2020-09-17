@@ -1,5 +1,5 @@
 ---
-hide: false
+hide: true
 type: "featured"
 path: "/posts/my-self-driving-car/"
 category: "Car"

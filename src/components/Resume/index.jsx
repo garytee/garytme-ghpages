@@ -5,7 +5,7 @@ import { FaPrint, FaGithub, FaFacebook, FaTwitter, FaLinkedin } from 'react-icon
 import Clearfix from '~/components/Common/Clearfix';
 import { PREFIX, AUTHOR, EMAIL, GITHUB_ID, TWITTER_ID, FACEBOOK_ID, LINKEDIN_ID } from '~/constants';
 import * as profileUrl from '~/resources/profilepic.png';
-import { Wrapper, BasicInformation, SocialInformation, MDInformation, Button } from './styled';
+import { Wrapper, BasicInformation, SocialInformation, MDInformation, Button, ResumePage } from './styled';
 import IconLocation from "~/components/Icons/location"
 import { Link } from 'gatsby';
 import Img from 'gatsby-image'
@@ -30,6 +30,7 @@ const Resume = ({ data: { resume: { edges: resume } } }) => (
   </title>
   <meta name="og:title" content={`${PREFIX}RESUME`} />
   </Helmet>
+  <ResumePage>
   <PortfolioCards initialPose="closed" pose="open" className="portfolio_cards">
   {resume.map(({ node: { title ,company ,link ,current ,education ,location ,duration , bullets = [] } }, i) => {
     return (
@@ -62,6 +63,7 @@ const Resume = ({ data: { resume: { edges: resume } } }) => (
       );
   })}
   </PortfolioCards>
+  </ResumePage>
   </Wrapper>
   );
 Resume.propTypes = {
