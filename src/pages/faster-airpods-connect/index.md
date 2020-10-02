@@ -1,6 +1,6 @@
 ---
 hide: false
-path: "/post/faster-airpods-connect/"
+path: "/posts/faster-airpods-connect/"
 category: ""
 tags: [""]
 title: "A Faster Way to Connect AirPods to your Mac"
