@@ -1,10 +1,10 @@
 ---
 hide: false
-path: "/posts/install-os-rpi/"
+path: "/posts/installing-an-os-on-your-pi/"
 category: "Raspberry-Pi"
 tags: [""]
 title: "Installing an OS on your Raspberry Pi"
-date: "2018-01-09T00:00:00.000Z"
+date: "2008-01-09T00:00:00.000Z"
 summary: "There's several ways to install an operating system on your Raspberry Pi - Here's how."
 images: ["images/3.png"]
 heroimages: 
@@ -79,8 +79,19 @@ Follow the installer wizard to install your OS.
 
 ### Using PiBakery
 
-PiBakery is an awesome tool that is both easy to use an advanced. It makes installing Raspbian extremely easy but also allows for a multitude of options.
+Unfortunately PiBakery is not longer being actively developed. I recommend using ApplePiBaker instead.
+
+
+~~PiBakery is an awesome tool that is both easy to use an advanced. It makes installing Raspbian extremely easy but also allows for a multitude of options.~~
 
 ![pibakery](./pibakery.png)[]()
+
+~~Simply plug your SD card into your computer, choose some options and click 'write'. Nice and easy :)~~
+
+### Using ApplePiBaker
+
+ApplePiBaker is a similar GUI tool to PiBakery that is still being actively developed 
+
+![applepibaker](./applepibaker.png)[]()
 
 Simply plug your SD card into your computer, choose some options and click 'write'. Nice and easy :)

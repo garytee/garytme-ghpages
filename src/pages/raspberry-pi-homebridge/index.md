@@ -1,6 +1,5 @@
 ---
-hide: true
-type: "featured"
+hide: false
 path: "/posts/rpi-homebridge/"
 category: "Raspberry-Pi"
 tags: ["tag"]
@@ -11,7 +10,9 @@ components: [{
   rootId: 'sample-component',
   fileName: 'sample',
 }]
-images: ["images/3.png"]
+images: ["images/pvimage.png"]
+heroimages: 
+    - "./homekit-unlock-featured-image.png"
 ---
 
 <div id="sample-component"></div>

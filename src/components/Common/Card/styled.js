@@ -65,7 +65,7 @@ export const StyledArticle = styled.article`
 
     &:hover {
       h3,
-      p,
+      // p,
       small {
         text-decoration: underline;
       }
@@ -73,7 +73,8 @@ export const StyledArticle = styled.article`
   }
 
   h3 {
-    padding: 0 0 6px;
+    // padding: 0 0 6px;
+    padding: 20px 0px;
     height: 2.4em;
     line-height: 1.2em;
     font-size: 20px;

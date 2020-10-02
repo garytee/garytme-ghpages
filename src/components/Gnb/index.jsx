@@ -214,7 +214,7 @@ const Gnb = ({
             </StyledLink>
             </ListMenu>
 {/*             <ListMenu> */}
-{/*             <StyledLink to="/posts/1" className={isPost ? 'active' : ''}> */}
+{/*             <StyledLink to="/pages/1" className={isPost ? 'active' : ''}> */}
 {/*             Posts */}
 {/*             &nbsp; */}
 {/*             {categories.length > 0 ? <FaCaretDown /> : null} */}
