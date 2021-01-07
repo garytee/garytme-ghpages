@@ -213,31 +213,31 @@ const Gnb = ({
             <Img critical={true} fixed={data.file.childImageSharp.fixed} />
             </StyledLink>
             </ListMenu>
-            <ListMenu>
-            <StyledLink to="/pages/1" className={isPost ? 'active' : ''}>
-            Posts
-            &nbsp;
-            {categories.length > 0 ? <FaCaretDown /> : null}
-            </StyledLink>
-            <SubMenu>
-            <div>
-            {categories.map(({ key, length }) => {
-              if (key === '__ALL__') {
-                return null;
-              }
-              return (
-                <li key={key}>
-                <Link to={`/categories/${key}/1`}>
-                {reactStringReplace(key, /-(\w+)/g, (match, i) => (
-                  <span key={i}>&nbsp;{match}</span>
-                  ))}
-                </Link>
-                </li>
-                );
-            })}
-            </div>
-            </SubMenu>
-            </ListMenu>
+{/*             <ListMenu> */}
+{/*             <StyledLink to="/pages/1" className={isPost ? 'active' : ''}> */}
+{/*             Posts */}
+{/*             &nbsp; */}
+{/*             {categories.length > 0 ? <FaCaretDown /> : null} */}
+{/*             </StyledLink> */}
+{/*             <SubMenu> */}
+{/*             <div> */}
+{/*             {categories.map(({ key, length }) => { */}
+{/*               if (key === '__ALL__') { */}
+{/*                 return null; */}
+{/*               } */}
+{/*               return ( */}
+{/*                 <li key={key}> */}
+{/*                 <Link to={`/categories/${key}/1`}> */}
+{/*                 {reactStringReplace(key, /-(\w+)/g, (match, i) => ( */}
+{/*                   <span key={i}>&nbsp;{match}</span> */}
+{/*                   ))} */}
+{/*                 </Link> */}
+{/*                 </li> */}
+{/*                 ); */}
+{/*             })} */}
+{/*             </div> */}
+{/*             </SubMenu> */}
+{/*             </ListMenu> */}
             {hasPortfolio ? (
               <ListMenu>
               <StyledLink to="/portfolio" className={isPortfolio ? 'active' : ''}>
