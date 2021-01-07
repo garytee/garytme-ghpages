@@ -2,4 +2,4 @@
 
 ## TODO
 - [x] add sitemap.xml & robots.txt
-- [ ] use typescript for typing
+- [ ] add posts

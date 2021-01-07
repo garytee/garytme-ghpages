@@ -15,7 +15,6 @@ export const Tags = styled.div`
 `;
 
 export const PostContent = styled.section`
-  // padding: 1em 0 4em;
   line-height: 1.6em;
 
   h2 {
@@ -34,7 +33,6 @@ export const PostContent = styled.section`
   }
 
   p {
-    // margin: 16px 0 0;
     margin: 16px 0;
     font-size: 16px;
   }
@@ -45,7 +43,6 @@ export const PostContent = styled.section`
     line-height: 1.2em;
     color: #aaa;
     font-style: italic;
-    // font-family: 'Kaushan Script';
     font-size: 24px;
   }
 

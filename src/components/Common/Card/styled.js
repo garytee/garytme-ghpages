@@ -54,10 +54,6 @@ export const StyledArticle = styled.article`
     background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
     border-radius: 6px;
     border: 1px solid #e5e5e5;
-
-    // &:hover {
-    //   top: -8px;
-    // }
   }
 
   a {
@@ -65,7 +61,6 @@ export const StyledArticle = styled.article`
 
     &:hover {
       h3,
-      // p,
       small {
         text-decoration: underline;
       }

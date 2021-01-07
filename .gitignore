@@ -40,3 +40,6 @@ ENV/
 
 # generated files
 public/
+
+
+package-lock.json
