@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-
-
-
 const PortfolioCard = styled.li`
 
 width: 100%;
