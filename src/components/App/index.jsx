@@ -20,23 +20,6 @@ const ThemeContext = React.createContext(defaultState)
 const supportsDarkMode = () =>
   window.matchMedia('(prefers-color-scheme: dark)').matches === true
 export default class App extends Component {
-// Add class on scroll to change color of header
-  //   componentDidMount() {
-  //   window.addEventListener("scroll", this.toggleBodyClass);
-  //   this.toggleBodyClass();
-  // }
-  // componentWillUnmount() {
-  //   window.removeEventListener("scroll", this.toggleBodyClass);
-  // }
-  // toggleBodyClass = () => {
-  //   if (window.scrollY > 100) {
-  //     // document.body.classList.add("showChildDiv");
-  //     document.getElementById("navigation").classList.add("scrolled");
-  //   } else {
-  //     // document.body.classList.remove("showChildDiv");
-  //     document.getElementById("navigation").classList.remove("scrolled");
-  //   }
-  // };
   render() {
     return (
       <div

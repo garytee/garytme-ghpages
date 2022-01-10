@@ -1,27 +1,39 @@
 module.exports = {
   presets: [
-    '@babel/preset-react',
+    "@babel/preset-react",
     [
-      '@babel/preset-env',
+      "@babel/preset-env",
       {
-        corejs: '3',
-        useBuiltIns: 'usage',
+        corejs: "3",
+        useBuiltIns: "usage",
       },
     ],
   ],
   plugins: [
     [
-      '@babel/plugin-proposal-class-properties',
+      "@babel/plugin-proposal-class-properties",
       {
         loose: true,
       },
     ],
     [
-      '@babel/plugin-proposal-pipeline-operator',
+      "@babel/plugin-proposal-private-property-in-object",
       {
-        proposal: 'minimal',
+        loose: true,
       },
     ],
-    '@babel/plugin-syntax-dynamic-import',
+    [
+      "@babel/plugin-proposal-private-methods",
+      {
+        loose: true,
+      },
+    ],
+    [
+      "@babel/plugin-proposal-pipeline-operator",
+      {
+        proposal: "minimal",
+      },
+    ],
+    "@babel/plugin-syntax-dynamic-import",
   ],
 };

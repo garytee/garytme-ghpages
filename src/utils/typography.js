@@ -1,16 +1,4 @@
-// import Typography from "typography"
-// import funstonTheme from 'typography-theme-funston'
-
-// const typography = new Typography(
-//   funstonTheme
-// )
-
-// export default typography
-
 import Typography from "typography";
-
-// let bodyFontFamily = ["Patua One", "cursive"];
-// let headerFontFamily = ["Cabin Condensed", "sans-serif"];
 
 let headerFontFamily = ["Patua One", "cursive"];
 let bodyFontFamily = ["Cabin Condensed", "sans-serif"];

@@ -134,14 +134,6 @@ const PostTemplate = ({
         </title>
         <meta name="og:title" content={`${PREFIX}${title}`} />
       </Helmet>
-{/*       {image === null ? null : ( */}
-{/*         <ImageWrapper> */}
-{/*           <img */}
-{/*             src={image.includes('//') ? image : require(`~/resources/${image}`)} */}
-{/*             alt={title} */}
-{/*           /> */}
-{/*         </ImageWrapper> */}
-{/*       )} */}
 
 
   {heroimages != null && heroimages.map((heroimage, i) => {
@@ -158,25 +150,7 @@ const PostTemplate = ({
       <h1>
         {title}
       </h1>
-{/*       <time> */}
-{/*         {formattedDate(date)} */}
-{/*       </time> */}
-{/*       {tags.length === 0 ? null : ( */}
-{/*         <Tags> */}
-{/*           <FaTags /> */}
-{/*           {tags.map(tag => ( */}
-{/*             <Link */}
-{/*               key={tag} */}
-{/*               to={`/tags/${tag}/1`} */}
-{/*             > */}
-{/*               <small> */}
-{/*                 {tag} */}
-{/*               </small> */}
-{/*             </Link> */}
-{/*           ))} */}
-{/*         </Tags> */}
-{/*       )} */}
-{/*       <Bio /> */}
+
       <PostContent>
         <div id="post-contents" dangerouslySetInnerHTML={{ __html: html }} />
       </PostContent>

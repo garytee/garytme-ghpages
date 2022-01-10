@@ -26,9 +26,9 @@ const Resume = ({ data: { resume: { edges: resume } } }) => (
   <Wrapper>
   <Helmet>
   <title>
-  {`${PREFIX}RESUME`}
+  {`${PREFIX}Resume`}
   </title>
-  <meta name="og:title" content={`${PREFIX}RESUME`} />
+  <meta name="og:title" content={`${PREFIX}Resume`} />
   </Helmet>
   <ResumePage>
   <PortfolioCards initialPose="closed" pose="open" className="portfolio_cards">
