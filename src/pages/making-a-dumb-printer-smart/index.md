@@ -1,5 +1,5 @@
 ---
-hide: false
+hide: true
 path: "/posts/making-a-dumb-printer-smart/"
 category: "Raspberry-Pi"
 tags: ["tag"]

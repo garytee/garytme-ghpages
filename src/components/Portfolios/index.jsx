@@ -9,7 +9,7 @@ import posed from 'react-pose';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-import { PortImage, PortfolioCards, PortfolioCard } from './styled';
+import { PortImage, PortfolioCards, PortfolioCard, PortfolioWrapper } from './styled';
 
 import ImgWithOrient from '~/components/imageOrient';
 
@@ -25,7 +25,8 @@ const Portfolios = ({
       <meta name="og:title" content={`${PREFIX}Portfolio`} />
     </Helmet>
 
-    <div className="projects-wrapper">
+    {/* <div className="projects-wrapper"> */}
+    <PortfolioWrapper>
       <PortfolioCards className="portfolio_cards">
         {portfolios.map(
           ({
@@ -57,7 +58,8 @@ const Portfolios = ({
           }
         )}
       </PortfolioCards>
-    </div>
+      {/* </div> */}
+    </PortfolioWrapper>
   </Wrapper>
 );
 Portfolios.propTypes = {

@@ -3,6 +3,7 @@ import SimpleWrapper from '~/components/Common/SimpleWrapper';
 import { PRIMARY_COLOR } from '~/components/Common/constants';
 export const Wrapper = styled(SimpleWrapper)`
 padding: 100px 20px;
+max-width: 1200px;
 @media (max-width: 414px) {
   padding: 70px 16px 0;
 }
@@ -26,8 +27,9 @@ h2 {
 }
 ul {
   margin: 10px 0;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 20px;
   list-style: disc;
+  line-height: 20px;
 }
 a {
   text-decoration: underline;

@@ -1,5 +1,5 @@
 ---
-hide: false
+hide: true
 path: "/posts/installing-an-os-on-your-pi/"
 category: "Raspberry-Pi"
 tags: [""]

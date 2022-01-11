@@ -50,16 +50,21 @@ export const GnbWrapper = styled.div`
   font-size: 14px;
   font-weight: 600;
   z-index: 3000;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
   background-color: ${({ theme: { backgroundColor } }) => backgroundColor};
-        transition: all 0.6s ease;
+  transition: all 0.6s ease;
 
-
-&.scrolled{
-      transition: all .5s ease;
-    -webkit-box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
-    -moz-box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
-    box-shadow: 0 6px 33px 0 rgba(0, 0, 0, .75);
-}
+  &.scrolled {
+    transition: all 0.5s ease;
+    -webkit-box-shadow: 0 6px 33px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 6px 33px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 6px 33px 0 rgba(0, 0, 0, 0.75);
+  }
 
   @media (max-width: 414px) {
     height: 60px;
@@ -68,17 +73,16 @@ export const GnbWrapper = styled.div`
     ${hamburger}
   }
 
-  ul{
+  ul {
     margin: 0;
   }
 
-     .hero {
-      background: @sunrise-gradient;
-      .dark-mode & {
-        background: @sunset-gradient;
-      }
+  .hero {
+    background: @sunrise-gradient;
+    .dark-mode & {
+      background: @sunset-gradient;
     }
-
+  }
 `;
 
 export const List = styled.ul`

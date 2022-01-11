@@ -1,5 +1,5 @@
 ---
-hide: false
+hide: true
 path: "/posts/my-self-driving-car/"
 category: "Car"
 tags: ["tag"]

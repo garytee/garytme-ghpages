@@ -1,5 +1,5 @@
 ---
-hide: false
+hide: true
 path: "/posts/faster-airpods-connect/"
 category: ""
 tags: [""]

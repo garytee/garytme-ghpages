@@ -47,3 +47,9 @@ export const PortImage = styled.div`
 max-width: 200px;
 margin: 0 auto;
 `;
+
+
+export const PortfolioWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;

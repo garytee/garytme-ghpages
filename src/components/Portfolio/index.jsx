@@ -12,9 +12,9 @@ const Portfolio = ({ data: { portfolio: { frontmatter: { title, portfolioimages,
   <Wrapper>
   <Helmet>
   <title>
-  {`${PREFIX}${title.toUpperCase()}`}
+  {`${PREFIX}Portfolio | ${title}`}
   </title>
-  <meta name="og:title" content={`${PREFIX}${title.toUpperCase()}`} />
+  <meta name="og:title" content={`${PREFIX}${title}`} />
   </Helmet>
   <PortfolioDescription>
   <section dangerouslySetInnerHTML={{ __html: html }} />

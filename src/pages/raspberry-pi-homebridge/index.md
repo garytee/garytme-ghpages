@@ -1,5 +1,5 @@
 ---
-hide: false
+hide: true
 path: "/posts/rpi-homebridge/"
 category: "Raspberry-Pi"
 tags: ["tag"]

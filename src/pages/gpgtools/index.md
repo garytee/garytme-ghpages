@@ -1,5 +1,5 @@
 ---
-hide: false
+hide: true
 path: "/posts/gpgtools/"
 category: ""
 tags: [""]

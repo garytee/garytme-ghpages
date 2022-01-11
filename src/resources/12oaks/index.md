@@ -16,22 +16,16 @@ The philosophy that drives 12 Oaks Desserts is that a great dessert makes life a
 
 Now based in Los Angeles, 12 Oaks Desserts bring time-honored baking traditions to modern treats. The result? Cakes you’ll crave, cheesecakes you’ll covet, and cake pops that make your busy life just a little more delicious.
 
-## Case Study
-12 Oaks Desserts had already been successful on Shopify, but found the platform to be too limiting as the company grew. They needed text inputs for certain products, as well as limits on what could be shipped or picked up and when.
+## Built With
 
-## What I did
-- Developed the website with a flexible CMS to allow easy customization
-- Dynamic shipping options based on geolocation and the types of products in cart
-- Pick up/Drop off scheduling
-
-## Libraries / Tools
-### Hosting
-- Wordpress
-- AJAX
-- Stripe API
-- AWS ec2
-- AWS S3
-- Sass
+- Nginx
+- Javscript
 - PHP
-
-<!-- [Go to Web Site →](https://www.12oaksdesserts.com/) -->
+- Sass
+- MySQL
+- Let's Encrypt
+- Duplicity
+- Redis
+- Stripe API
+- Google Maps API
+- AWS
