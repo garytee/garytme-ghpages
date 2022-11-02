@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '~/components/layout';
 import CategorizedList from '~/components/CategorizedList';
 
-const CategorizedListTemplate = props => (
-    <CategorizedList {...props} />
+const CategorizedListTemplate = (props) => (
+  <CategorizedList {...props} />
 );
 
 export default CategorizedListTemplate;

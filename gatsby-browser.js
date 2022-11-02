@@ -1,6 +1,6 @@
 // import '@babel/polyfill';
 
-import React from "react";
+import React from 'react';
 // import Transition from "./src/components/Transition";
 
 // export const wrapPageElement = ({ element, props }) => {
@@ -8,7 +8,7 @@ import React from "react";
 // };
 
 export const onClientEntry = () => {
-require("typeface-cabin-condensed");
-require("typeface-patua-one");
+  require('typeface-cabin-condensed');
+  require('typeface-patua-one');
 };
 

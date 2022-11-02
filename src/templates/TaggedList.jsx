@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '~/components/layout';
 import TaggedList from '~/components/TaggedList';
 
-const TaggedListTemplate = props => (
-    <TaggedList {...props} />
+const TaggedListTemplate = (props) => (
+  <TaggedList {...props} />
 );
 
 export default TaggedListTemplate;

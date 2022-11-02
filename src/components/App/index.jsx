@@ -1,34 +1,36 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import { Link } from 'gatsby';
 import Gnb from '~/components/Gnb';
 import Footer from '~/components/Footer';
 import { BLACK_COLOR, WHITE_COLOR, homeherolight, homeherodark, homeabout, lightblue, darkblue } from '~/components/Common/constants';
 import { Wrapper } from './styled';
-import { Link } from "gatsby";
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+
+const ListLink = (props) => (
+  <li style={{ display: 'inline-block', marginRight: '1rem' }}>
     <Link to={props.to}>{props.children}</Link>
   </li>
-)
+);
 const defaultState = {
   dark: false,
   toggleDark: () => {},
-}
-const ThemeContext = React.createContext(defaultState)
+};
+const ThemeContext = React.createContext(defaultState);
 // Getting dark mode information from OS!
 const supportsDarkMode = () =>
-  window.matchMedia('(prefers-color-scheme: dark)').matches === true
+  window.matchMedia('(prefers-color-scheme: dark)').matches === true;
 export default class App extends Component {
   render() {
     return (
       <div
         style={{
-          height: "1000px"
+          height: '1000px',
         }}
       />
     );
   }
+
   static propTypes = {
     children: PropTypes.node.isRequired,
     location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired,
@@ -36,23 +38,27 @@ export default class App extends Component {
     postInformations: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     hasPortfolio: PropTypes.bool.isRequired,
   }
+
 state = {
-    dark: false,
-  }
+  dark: false,
+}
+
   toggleDark = () => {
-    let dark = !this.state.dark
-    localStorage.setItem('dark', JSON.stringify(dark))
-    this.setState({ dark })
+    const dark = !this.state.dark;
+    localStorage.setItem('dark', JSON.stringify(dark));
+    this.setState({ dark });
   }
+
   componentDidMount() {
     // Getting dark mode value from localStorage!
-    const lsDark = JSON.parse(localStorage.getItem('dark'))
+    const lsDark = JSON.parse(localStorage.getItem('dark'));
     if (lsDark) {
-      this.setState({ dark: lsDark })
+      this.setState({ dark: lsDark });
     } else if (supportsDarkMode()) {
-      this.setState({ dark: true })
+      this.setState({ dark: true });
     }
   }
+
   render() {
     const {
       location,
@@ -67,7 +73,7 @@ state = {
       color: WHITE_COLOR,
       backgroundColor: BLACK_COLOR,
       homeherobackground: homeherodark,
-      homeabout: homeabout,
+      homeabout,
     } : {
       bluecolor: darkblue,
       color: BLACK_COLOR,

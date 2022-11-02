@@ -1,18 +1,18 @@
 import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import { POST, PORTFOLIO, FEATURED } from '~/constants';
-import App from '~/components/App';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fal } from '@fortawesome/pro-light-svg-icons';
-import { faCheckSquare, faCoffee, fas  } from '@fortawesome/pro-solid-svg-icons';
+import { faCheckSquare, faCoffee, fas } from '@fortawesome/pro-solid-svg-icons';
+import App from '~/components/App';
+import { POST, PORTFOLIO, FEATURED } from '~/constants';
 
 import getPosts from '~/utils/getPosts';
 
 
-library.add(fab, fas, fal, faCheckSquare, faCoffee)
+library.add(fab, fas, fal, faCheckSquare, faCoffee);
 
 const Layout = ({ children, location }) => (
   <StaticQuery
@@ -108,7 +108,7 @@ const Layout = ({ children, location }) => (
 
       const hasPortfolio = portfolios.length > 0;
 
-      const childrenWithProps = Children.map(children, child => cloneElement(child, { portfolios, allposts }));
+      const childrenWithProps = Children.map(children, (child) => cloneElement(child, { portfolios, allposts }));
 
       return (
         <App

@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
-import Truncate from "react-truncate";
-import { FaTags } from "react-icons/fa";
-import formattedDate from "~/utils/formattedDate";
-import { ImageWrapper, TagWrapper, StyledArticle } from "./styled";
-import Img from "gatsby-image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import Truncate from 'react-truncate';
+import { FaTags } from 'react-icons/fa';
+import Img from 'gatsby-image';
+import formattedDate from '~/utils/formattedDate';
+import { ImageWrapper, TagWrapper, StyledArticle } from './styled';
 
 const Card = ({ tags, path, images, heroimages, title, date, summary }) => {
   const [image = null] = images;
@@ -14,16 +14,14 @@ const Card = ({ tags, path, images, heroimages, title, date, summary }) => {
     <StyledArticle>
       <div>
         <Link to={path}>
-          {heroimages != null &&
-            heroimages.map((heroimage, i) => {
-              return (
-                <Img
-                  key={i}
-                  fluid={heroimage.childImageSharp.fluid}
-                  alt={title}
-                />
-              );
-            })}
+          {heroimages != null
+            && heroimages.map((heroimage, i) => (
+              <Img
+                key={i}
+                fluid={heroimage.childImageSharp.fluid}
+                alt={title}
+              />
+            ))}
           <h3>
             <Truncate lines={2} ellipsis={<span>...</span>}>
               {title}
@@ -54,9 +52,9 @@ Card.defaultProps = {
   tags: [],
   images: [],
   portimages: [],
-  title: "",
-  date: "",
-  summary: "",
+  title: '',
+  date: '',
+  summary: '',
 };
 
 export default Card;

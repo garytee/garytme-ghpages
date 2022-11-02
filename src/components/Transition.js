@@ -1,5 +1,5 @@
-import React from "react";
-import posed, { PoseGroup } from "react-pose";
+import React from 'react';
+import posed, { PoseGroup } from 'react-pose';
 
 const timeout = 0;
 
@@ -10,16 +10,16 @@ class Transition extends React.PureComponent {
     const RoutesContainer = posed.div({
       enter: {
         opacity: 1,
-        filter: "blur(0px)",
+        filter: 'blur(0px)',
         y: 0,
         delay: timeout,
-        delayChildren: timeout
+        delayChildren: timeout,
       },
       exit: {
         opacity: 0,
-        filter: "blur(20px)",
-        y: 30
-      }
+        filter: 'blur(20px)',
+        y: 30,
+      },
     });
 
     return (

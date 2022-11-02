@@ -1,15 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link, StaticQuery, graphql } from "gatsby";
-import Helmet from "react-helmet";
-import { TITLE } from "~/constants";
-import { Intro, Wrapper } from "./styled";
-import SimpleWrapper from "~/components/Common/SimpleWrapper";
-import ImgWithOrient from "~/components/imageOrient";
-import posed from "react-pose";
-import Img from "gatsby-image";
-import * as profileUrl from "~/resources/profilepic.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, StaticQuery, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import posed from 'react-pose';
+import Img from 'gatsby-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   FaPrint,
   FaGithub,
@@ -17,24 +12,28 @@ import {
   FaTwitter,
   FaLinkedin,
   FaEnvelope,
-} from "react-icons/fa";
-import {
+} from 'react-icons/fa';
+import { TITLE,
   PREFIX,
   AUTHOR,
   EMAIL,
   GITHUB_ID,
   TWITTER_ID,
   FACEBOOK_ID,
-  LINKEDIN_ID,
-} from "~/constants";
-import Card from "~/components/Common/Card";
+  LINKEDIN_ID } from '~/constants';
+import { Intro, Wrapper } from './styled';
+import SimpleWrapper from '~/components/Common/SimpleWrapper';
+import ImgWithOrient from '~/components/imageOrient';
+import * as profileUrl from '~/resources/profilepic.png';
+import Card from '~/components/Common/Card';
+
 const Image = posed.div({
   open: {
     y: 0,
     opacity: 1,
     delay: 300,
     transition: {
-      y: { type: "spring", stiffness: 500, damping: 15 },
+      y: { type: 'spring', stiffness: 500, damping: 15 },
       default: { duration: 300 },
     },
   },
@@ -46,12 +45,12 @@ const Image = posed.div({
 });
 const List = posed.ul({
   closed: {
-    x: "0%",
+    x: '0%',
     delayChildren: 1000,
     staggerChildren: 100,
     opacity: 1,
   },
-  open: { x: "-100%", delay: 300, opacity: 0 },
+  open: { x: '-100%', delay: 300, opacity: 0 },
 });
 const Item = posed.li({
   closed: { y: 0, opacity: 1 },
@@ -102,7 +101,7 @@ const Home = ({ portfolios, allposts }) => (
               <Item>
                 {FACEBOOK_ID ? (
                   <a
-                    href={`mailto:gary@garyt.me`}
+                    href="mailto:gary@garyt.me"
                     target="_blank"
                     rel="noreferrer noopener"
                   >

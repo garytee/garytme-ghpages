@@ -1,11 +1,18 @@
-import React from "react";
-import { FooterWrapper, FooterContent } from "./styled";
+import React from 'react';
+import { FooterWrapper, FooterContent } from './styled';
 
 const Footer = () => (
   <FooterWrapper>
     <FooterContent>
-      © {new Date().getFullYear()} - Gary Tietjen - Built with {` `}{" "}
-      <a target="_blank" href="https://www.gatsbyjs.org">
+      ©
+      {' '}
+      {new Date().getFullYear()}
+      {' '}
+      - Gary Tietjen - Built with
+      {' '}
+      {' '}
+      {' '}
+      <a target="_blank" href="https://www.gatsbyjs.org" rel="noreferrer">
         Gatsby.js
       </a>
     </FooterContent>

@@ -1,5 +1,5 @@
 ---
-hide: true
+hide: false
 path: "/posts/nodemcu-wifi-controlled-roomba/"
 category: ""
 tags: [""]

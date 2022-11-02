@@ -12,7 +12,6 @@ export const lightblue = 'rgba(67, 134, 211, 0.2)';
 export const darkblue = 'rgba(31, 88, 160, 0.2)';
 
 
-
 export const homeabout = '#afafaf';
 
 

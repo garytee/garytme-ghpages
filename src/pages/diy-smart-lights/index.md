@@ -1,5 +1,5 @@
 ---
-hide: true
+hide: false
 path: "/posts/diy-smart-lights/"
 category: ""
 tags: [""]

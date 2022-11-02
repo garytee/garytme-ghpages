@@ -1,25 +1,21 @@
 import { renderToString } from 'react-dom/server';
 import Helmet from 'react-helmet';
 import { ServerStyleSheet } from 'styled-components';
-import React from "react";
-import Transition from "./src/components/Transition";
+import React from 'react';
+import Transition from './src/components/Transition';
 
-export const wrapPageElement = ({ element, props }) => {
-  return <Transition {...props}>{element}</Transition>;
-};
+export const wrapPageElement = ({ element, props }) => <Transition {...props}>{element}</Transition>;
 
 export const replaceRenderer = ({
   bodyComponent,
   replaceBodyHTMLString,
-  setHeadComponents
+  setHeadComponents,
 }) => {
   const sheet = new ServerStyleSheet();
   const body = renderToString(sheet.collectStyles(bodyComponent));
 
   replaceBodyHTMLString(body);
   setHeadComponents([sheet.getStyleElement()]);
-
-  return;
 };
 
 export const onRenderBody = ({

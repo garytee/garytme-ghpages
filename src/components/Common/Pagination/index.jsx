@@ -15,7 +15,7 @@ const Pagination = ({
   const pages = Array.from(new Array(pageCount), (cnt, i) => i + 1);
   const page = getPage(location);
   const hasManyPages = pageCount >= PAGE_PER_SCREEN;
-  const filteredPages = hasManyPages ? pages.filter(p => (
+  const filteredPages = hasManyPages ? pages.filter((p) => (
     Math.abs(page - p) <= Math.floor(PAGE_PER_SCREEN / 2)
   )) : pages;
   const isNearStart = filteredPages.includes(1);

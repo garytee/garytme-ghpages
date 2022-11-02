@@ -11,6 +11,13 @@ module.exports = {
     browser: true,
   },
   rules: {
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'comma-dangle': [
       error,
       {
@@ -105,6 +112,6 @@ module.exports = {
     react: {
       pragma: 'React',
       version: '16.8.5',
-    }
-  }
+    },
+  },
 };

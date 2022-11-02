@@ -6,12 +6,12 @@ import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import { FaTags } from 'react-icons/fa';
 import Clipboard from 'clipboard';
+import Img from 'gatsby-image';
 import Bio from '~/components/Bio';
 import PostWrapper from '~/components/Common/PostWrapper';
 import { PREFIX, SITE_URL, DISQUS_ID } from '~/constants';
 import formattedDate from '~/utils/formattedDate';
 import { Tags, PostContent, ImageWrapper, ComponentInPost } from './styled';
-import Img from 'gatsby-image'
 
 const PostTemplate = ({
   data: {
@@ -136,15 +136,13 @@ const PostTemplate = ({
       </Helmet>
 
 
-  {heroimages != null && heroimages.map((heroimage, i) => {
-    return (
-      <Img
-      key={i}
-      fluid={heroimage.childImageSharp.fluid}
-      alt={title}
-      />
-      );
-  })}
+      {heroimages != null && heroimages.map((heroimage, i) => (
+        <Img
+          key={i}
+          fluid={heroimage.childImageSharp.fluid}
+          alt={title}
+        />
+      ))}
 
 
       <h1>

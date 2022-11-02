@@ -13,7 +13,7 @@ const CategorizedList = ({ data, location }) => {
   const [, , category] = location.pathname.split('/');
   const allPosts = data
     |> getPosts
-    |> (posts => posts.filter(({ node: { frontmatter: { category: c } } }) => category === c));
+    |> ((posts) => posts.filter(({ node: { frontmatter: { category: c } } }) => category === c));
   const postCount = allPosts.length;
   const posts = allPosts.slice((page - 1) * CONTENT_PER_PAGE, page * CONTENT_PER_PAGE);
 

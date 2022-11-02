@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '~/components/layout';
 import Portfolio from '~/components/Portfolio';
 
-const PortfolioTemplate = props => (
-    <Portfolio {...props} />
+const PortfolioTemplate = (props) => (
+  <Portfolio {...props} />
 );
 
 export default PortfolioTemplate;

@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '~/components/layout';
 import Post from '~/components/Post';
 
-const PostTemplate = props => (
-    <Post {...props} />
+const PostTemplate = (props) => (
+  <Post {...props} />
 );
 
 export default PostTemplate;

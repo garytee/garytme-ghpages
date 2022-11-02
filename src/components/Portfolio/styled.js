@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import SimpleWrapper from '~/components/Common/SimpleWrapper';
 import { PRIMARY_COLOR } from '~/components/Common/constants';
+
 export const Wrapper = styled(SimpleWrapper)`
 padding: 100px 20px;
 max-width: 1200px;

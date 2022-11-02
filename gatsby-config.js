@@ -11,14 +11,14 @@ module.exports = {
   siteMetadata,
   pathPrefix: '/',
   plugins: [
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-          resolve: `gatsby-remark-relative-images`,
+            resolve: 'gatsby-remark-relative-images',
           },
           {
             resolve: 'gatsby-remark-images',
@@ -28,7 +28,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          `gatsby-remark-images-modal`,
+          'gatsby-remark-images-modal',
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: {
@@ -52,11 +52,11 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-json`,
+    'gatsby-transformer-json',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `data`,
+        name: 'data',
         path: `${__dirname}/src/data`,
       },
     },
@@ -75,10 +75,10 @@ module.exports = {
       },
     },
     {
-     resolve: `gatsby-plugin-typography`,
-     options: {
-      pathToConfigModule: `${__dirname}/src/utils/typography`,
-     },
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: `${__dirname}/src/utils/typography`,
+      },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -89,16 +89,16 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-layout',
       options: {
-        component: require.resolve(`./src/components/layout/index.jsx`),
+        component: require.resolve('./src/components/layout/index.jsx'),
       },
     },
     {
-      resolve: "gatsby-plugin-use-dark-mode",
+      resolve: 'gatsby-plugin-use-dark-mode',
       options: {
-         classNameDark: "dark-mode",
-         classNameLight: "light-mode",
-         storageKey: "darkMode",
-         minify: true,
+        classNameDark: 'dark-mode',
+        classNameLight: 'light-mode',
+        storageKey: 'darkMode',
+        minify: true,
       },
     },
     {
@@ -107,14 +107,14 @@ module.exports = {
         threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
         once: true, // Defines if animation needs to be launched once
         disable: false, // Flag for disabling animations
-        
+
         // Advanced Options
         selector: '[data-sal]', // Selector of the elements to be animated
         animateClassName: 'sal-animate', // Class name which triggers animation
         disabledClassName: 'sal-disabled', // Class name which defines the disabled state
         rootMargin: '0% 50%', // Corresponds to root's bounding box margin
         enterEventName: 'sal:in', // Enter event name
-        exitEventName: 'sal:out' ,// Exit event name
+        exitEventName: 'sal:out', // Exit event name
       },
     },
     'gatsby-plugin-react-helmet',
@@ -129,21 +129,21 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#3B9CFF',
         display: 'minimal-ui',
-        icon: `src/resources/favicon.png`, // This path is relative to the root of the site.
+        icon: 'src/resources/favicon.png', // This path is relative to the root of the site.
         icons: [{
           // Everything in /static will be copied to an equivalent
           // directory in /public during development and build, so
           // assuming your favicons are in /static/favicons,
           // you can reference them here
-          src: `/favicons/favicon-192x192.png`,
-          sizes: `192x192`,
-          type: `image/png`,
+          src: '/favicons/favicon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
         }, {
-          src: `/favicons/favicon-512x512.png`,
-          sizes: `512x512`,
-          type: `image/png`,
+          src: '/favicons/favicon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
         }],
-        
+
       },
     },
     'gatsby-plugin-sitemap',

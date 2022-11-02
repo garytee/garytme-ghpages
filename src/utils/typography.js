@@ -1,18 +1,18 @@
-import Typography from "typography";
+import Typography from 'typography';
 
-let headerFontFamily = ["Patua One", "cursive"];
-let bodyFontFamily = ["Cabin Condensed", "sans-serif"];
+const headerFontFamily = ['Patua One', 'cursive'];
+const bodyFontFamily = ['Cabin Condensed', 'sans-serif'];
 
 const typography = new Typography({
-  baseFontSize: "20px",
+  baseFontSize: '20px',
   baseLineHeight: 1.4,
-bodyColor: "hsla(0,0%,0%,0.87)",
-  headerWeight: "400",
+  bodyColor: 'hsla(0,0%,0%,0.87)',
+  headerWeight: '400',
   bodyWeight: 400,
   boldWeight: 700,
-    omitGoogleFont  : true,
-    headerFontFamily: headerFontFamily,
-    bodyFontFamily  : bodyFontFamily
+  omitGoogleFont: true,
+  headerFontFamily,
+  bodyFontFamily,
 });
 
 export default typography;

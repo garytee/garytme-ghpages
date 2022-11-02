@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import Layout from '~/components/layout';
 import Resume from '~/components/Resume';
 
-const ResumeTemplate = props => (
-    <Resume {...props} />
+const ResumeTemplate = (props) => (
+  <Resume {...props} />
 );
 
 export default ResumeTemplate;

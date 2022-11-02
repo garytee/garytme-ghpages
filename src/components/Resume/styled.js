@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Clearfix from '~/components/Common/Clearfix';
+
 export const Wrapper = styled.section`
 min-height: 100vh;
 

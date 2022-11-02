@@ -1,9 +1,10 @@
-import React, { useReducer, useCallback, useEffect } from "react";
-import useDarkMode from "use-dark-mode";
-import PropTypes from "prop-types";
-import { Link, navigate, StaticQuery, graphql } from "gatsby";
-import Toggle from "react-toggle";
-import { FaCaretDown, FaSearch, FaTags } from "react-icons/fa";
+import React, { useReducer, useCallback, useEffect } from 'react';
+import useDarkMode from 'use-dark-mode';
+import PropTypes from 'prop-types';
+import { Link, navigate, StaticQuery, graphql } from 'gatsby';
+import Toggle from 'react-toggle';
+import { FaCaretDown, FaSearch, FaTags } from 'react-icons/fa';
+import Img from 'gatsby-image';
 import {
   Hamburger,
   MovableFaCaretDown,
@@ -24,16 +25,17 @@ import {
   MobileMenus,
   MobileMenu,
   ToggleWrapper,
-} from "./styled";
-import Img from "gatsby-image";
-const reactStringReplace = require("react-string-replace");
-const TOGGLE_MENU = "TOGGLE_MENU";
-const TOGGLE_SUB_MENU = "TOGGLE_SUB_MENU";
-const INPUT_KEYWORD = "INPUT_KEYWORD";
+} from './styled';
+
+const reactStringReplace = require('react-string-replace');
+
+const TOGGLE_MENU = 'TOGGLE_MENU';
+const TOGGLE_SUB_MENU = 'TOGGLE_SUB_MENU';
+const INPUT_KEYWORD = 'INPUT_KEYWORD';
 const initialState = {
   isMenuOpened: false,
   isSubMenuClosed: false,
-  searchKeyword: "",
+  searchKeyword: '',
 };
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -70,8 +72,7 @@ const Gnb = ({
   postInformations,
   hasPortfolio,
 }) => {
-  const [{ isMenuOpened, isSubMenuClosed, searchKeyword }, dispatch] =
-    useReducer(reducer, initialState);
+  const [{ isMenuOpened, isSubMenuClosed, searchKeyword }, dispatch] = useReducer(reducer, initialState);
   const toggleMenu = useCallback(() => {
     dispatch({ type: TOGGLE_MENU });
   }, []);
@@ -87,28 +88,26 @@ const Gnb = ({
   });
   useEffect(() => {
     if (isMenuOpened) {
-      global.document.body.style.overflow = "hidden";
+      global.document.body.style.overflow = 'hidden';
     } else {
-      global.document.body.style.overflow = "visible";
+      global.document.body.style.overflow = 'visible';
     }
   }, [isMenuOpened]);
-  const filteredPosts =
-    searchKeyword.length > 0
-      ? postInformations.filter(({ category = "", title = "", tags = [] }) => {
-          const c = category.toLowerCase();
-          const h = title.toLowerCase();
-          const t = tags.map((tag) => tag.toLowerCase());
-          const searchedWithCategory = c.search(searchKeyword) !== -1;
-          const searchedWithTitle = h.search(searchKeyword) !== -1;
-          const searchedWithTags =
-            t.filter((t) => t.search(searchKeyword) !== -1).length > 0;
-          return searchedWithCategory || searchedWithTitle || searchedWithTags;
-        })
-      : [];
+  const filteredPosts = searchKeyword.length > 0
+    ? postInformations.filter(({ category = '', title = '', tags = [] }) => {
+      const c = category.toLowerCase();
+      const h = title.toLowerCase();
+      const t = tags.map((tag) => tag.toLowerCase());
+      const searchedWithCategory = c.search(searchKeyword) !== -1;
+      const searchedWithTitle = h.search(searchKeyword) !== -1;
+      const searchedWithTags = t.filter((t) => t.search(searchKeyword) !== -1).length > 0;
+      return searchedWithCategory || searchedWithTitle || searchedWithTags;
+    })
+    : [];
   const { pathname } = location;
-  const isPortfolio = pathname.replace(/\/$/, "").startsWith("/portfolio");
-  const isHome = pathname.replace(/\/$/, "") === "";
-  const isResume = pathname.replace(/\/$/, "") === "/resume";
+  const isPortfolio = pathname.replace(/\/$/, '').startsWith('/portfolio');
+  const isHome = pathname.replace(/\/$/, '') === '';
+  const isResume = pathname.replace(/\/$/, '') === '/resume';
   const isPost = !(isPortfolio || isHome || isResume);
 
   // Instantiate with the default behavior, in this case, it defaults to light-mode
@@ -118,7 +117,7 @@ const Gnb = ({
   // Custom function that handles the toggling
   // When called, it replaces the class on document.body and holds it in localStorage
   const handleTheme = (theme) =>
-    theme === "dark" ? darkMode.enable() : darkMode.disable();
+    (theme === 'dark' ? darkMode.enable() : darkMode.disable());
 
   return (
     <StaticQuery
@@ -144,11 +143,11 @@ const Gnb = ({
                 <ListMenu>
                   <StyledLink
                     to="/"
-                    className={isHome ? "active" : ""}
+                    className={isHome ? 'active' : ''}
                     onClick={toggleMenu}
                   >
                     <Img
-                      critical={true}
+                      critical
                       fixed={data.file.childImageSharp.fixed}
                     />
                   </StyledLink>
@@ -158,7 +157,7 @@ const Gnb = ({
                   <ListMenu>
                     <StyledLink
                       to="/portfolio"
-                      className={isPortfolio ? "active" : ""}
+                      className={isPortfolio ? 'active' : ''}
                       onClick={toggleMenu}
                     >
                       Portfolio
@@ -168,10 +167,19 @@ const Gnb = ({
                 <ListMenu>
                   <StyledLink
                     to="/resume"
-                    className={isResume ? "active" : ""}
+                    className={isResume ? 'active' : ''}
                     onClick={toggleMenu}
                   >
                     Resume
+                  </StyledLink>
+                </ListMenu>
+                <ListMenu>
+                  <StyledLink
+                    to="/posts"
+                    className={isPost ? 'active' : ''}
+                    onClick={toggleMenu}
+                  >
+                    Posts
                   </StyledLink>
                 </ListMenu>
               </ul>
@@ -179,7 +187,7 @@ const Gnb = ({
           </MobileMenu>
           <Hamburger
             className={`hamburger hamburger--spin js-hamburger ${
-              isMenuOpened ? "is-active" : ""
+              isMenuOpened ? 'is-active' : ''
             }`}
             onClick={toggleMenu}
           >
@@ -190,7 +198,7 @@ const Gnb = ({
           <List>
             <ListMenu>
               <StyledLink to="/">
-                <Img critical={true} fixed={data.file.childImageSharp.fixed} />
+                <Img critical fixed={data.file.childImageSharp.fixed} />
               </StyledLink>
             </ListMenu>
 
@@ -198,15 +206,20 @@ const Gnb = ({
               <ListMenu>
                 <StyledLink
                   to="/portfolio"
-                  className={isPortfolio ? "active" : ""}
+                  className={isPortfolio ? 'active' : ''}
                 >
                   Portfolio
                 </StyledLink>
               </ListMenu>
             ) : null}
             <ListMenu>
-              <StyledLink to="/resume" className={isResume ? "active" : ""}>
+              <StyledLink to="/resume" className={isResume ? 'active' : ''}>
                 Resume
+              </StyledLink>
+            </ListMenu>
+            <ListMenu>
+              <StyledLink to="/pages/1" className={isPost ? 'active' : ''}>
+                Posts
               </StyledLink>
             </ListMenu>
           </List>
