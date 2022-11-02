@@ -18,6 +18,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'react/static-property-placement': ['error', 'static public field'],
     'comma-dangle': [
       error,
       {

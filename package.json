@@ -112,7 +112,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "lint": "eslint --ext .js,.jsx --config .eslintrc.js",
-    "newlint": "eslint --fix --ext .js,.jsx .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
     "dev": "gatsby develop --host 0.0.0.0 --p 3000",
     "clean": "rm -rf .cache && rm -rf public",
     "build": "gatsby build",
